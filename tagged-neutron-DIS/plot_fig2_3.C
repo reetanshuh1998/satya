@@ -30,7 +30,7 @@ void plot_fig2_3() {
     tree->SetBranchAddress("elec_out", &elec_out);
     tree->SetBranchAddress("neut_out", &neut_out);
 
-    double V = 1.0 * 49.0 * 0.249 * 0.99;
+    double V = 1.0 * 49.0 * 0.998 * 0.99; // Δ|t|=0.99, ΔQ²=49, ΔxL=0.998 (0.001→0.999), ΔxB≈0.99
     double N_gen = tree->GetEntries();
     double L = 1.0; 
     double norm = L * V / N_gen;

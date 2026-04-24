@@ -29,7 +29,7 @@ void plot_fig2_3() {
     tree->SetBranchAddress("neut_out", &neut_out);
 
     // Normalization factor: Rate (Hz)
-    double V = 1.0 * 49.0 * 0.249 * 0.99;
+    double V = 1.0 * 49.0 * 0.998 * 0.99; // Δ|t|=0.99, ΔQ²=49, ΔxL=0.998 (0.001→0.999), ΔxB≈0.99
     double N_gen = tree->GetEntries();
     double L = 1.0; // nb^-1 s^-1 (10^33 cm^-2 s^-1)
     double norm = L * V / N_gen;

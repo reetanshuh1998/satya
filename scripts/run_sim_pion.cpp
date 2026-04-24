@@ -13,7 +13,7 @@ void run_sim_pion(int nEvents = 1000000){
 	dis.SetTmax(1.0);
 	dis.SetTmin(0.01);
 	dis.SetxLmax(0.999);
-	dis.SetxLmin(0.75); // As per Fig 2 caption: 0.75 < xL < 1
+	dis.SetxLmin(0.001); // Full physical range [0,1]; paper cuts (xL>0.75 etc.) are applied at analysis level
 
 	dis.SetxBmax(1.0);
 	dis.SetxBmin(0.0001);
