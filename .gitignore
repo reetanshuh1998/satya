@@ -1,0 +1,19 @@
+# ROOT data files (too large for GitHub)
+*.root
+
+# ROOT compiled libraries and dictionaries
+*.so
+*.d
+*.pcm
+
+# Test/scratch scripts
+test_*.C
+
+# OS junk
+.DS_Store
+*.swp
+*~
+
+# Compiled binaries
+generate_dis_background
+get_sigma

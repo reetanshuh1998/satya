@@ -1,0 +1,1271 @@
+Charm Sivers function at EicC
+Senjie Zhu,1 Duxin Zheng,2 Lei Xia,1 and Yifei Zhang1, ∗
+
+arXiv:2409.00653v1 [hep-ph] 1 Sep 2024
+
+1
+
+University of Science and Technology of China, Hefei, Anhui Province 230026, China
+2
+Shandong Institute of Advanced Technology, Jinan, Shandong, 250100, China
+(Dated: September 4, 2024)
+
+The Electron-Ion Collider in China (EicC) is pivotal in enhancing our knowledge of the internal
+structure of nucleons and nuclei, particularly through the study of transverse momentum-dependent
+parton distributions (TMDs). Among the leading-twist TMDs, the Sivers function is of particular
+interest, as it provides crucial insights into the spin and momentum structure of hadrons and plays
+a significant role in describing transverse single spin asymmetries (SSAs) in high-energy scatterings.
+In this study, we focus on the theoretical framework and phenomenological implications of the
+Sivers function in the context of small-x physics, where it is intricately connected to the spindependent QCD odderon, demonstrating that the SSA can be expressed in terms of transverse
+momentum-dependent factorization within the Color Glass Condensate effective theory. Furthermore, we present simulation results using PythiaeRHIC to assess the feasibility of measuring the
+charm quark Sivers function at EicC. The simulation outcomes suggest that EicC, with its unique
+kinematic coverage, offers distinct advantages for probing the Sivers function, which would provide
+compelling evidence for the existence of the elusive spin-dependent odderon.
+
+I.
+
+INTRODUCTION
+
+In recent years, new-generation novel accelerators in
+particle and nuclear physics field, such as the ElectronIon Collider (EIC) in the US and the Electron-Ion Collider in China (EicC), have been proposed to enhance our
+understanding of the internal structure of nucleons and
+nuclei. The 3D transverse momentum dependent parton distributions (TMDs) provide insights into how partons are distributed within protons and other hadrons
+in relation to both their longitudinal and transverse momenta. These distributions offer unique perspectives on
+the internal momentum and spin structure of hadrons
+and are crucial for describing many collider physics cross
+sections [1–20].
+Within a spin- 12 hadron, there are eight leading-twist
+TMDs, among which the Sivers function is particularly
+of interest. Measuring the Sivers function is a primary
+objective for both the EIC and EicC, as it is essential
+for understanding the internal structure of protons and
+the unique QCD factorization properties related to Todd observables [21, 22]. Additionally, it plays a critical
+role in describing the transverse single spin asymmetry
+(SSA) observed in high-energy scatterings. SSA is a major focus in hadron physics and has driven significant
+theoretical advancements. Furthermore, the Sivers function is believed to be linked to parton orbital angular
+momentum [23, 24].
+Recent interest has also emerged at the intersection
+of spin physics and small-x physics [1–16, 25–27]. The
+small-x behavior of the Sivers function intersects with
+research on the QCD odderon—a C-odd t-channel gluon
+exchange initially proposed to explain the asymmetry between pp and pp̄ cross sections at extremely high energies. Studies have shown that both gluon and quark
+∗ ephy@ustc.edu.cn
+
+Sivers functions at small x are predominantly generated
+by the spin-dependent odderon, which is associated with
+the imaginary part of the dipole amplitude in the Color
+Glass Condensate (CGC) formalism [12–16, 28]. Due to
+the C-odd nature of odderon, the dynamically generated
+quark Sivers function and anti-quark Sivers function have
+equal magnitudes but differ in sign [16, 28].
+It holds significant importance to experimentally verify
+this theoretical prediction, as it could serve as compelling
+evidence for the existence of the elusive spin-dependent
+odderon. Investigating the charm quark Sivers distribution experimentally offers a clear avenue for testing the
+predicted sign change, under the assumption that the intrinsic charm Sivers distribution is negligible. In experimental studies, the charm quark Sivers function can be
+probed by measuring the single-spin asymmetry (SSA) in
+open charm quark production. This leads to a distinctive
+signal of sign separation between D0 and D̄0 AUT as a
+function of ph⊥ /z.
+II.
+
+THEORY
+
+One promising avenue for the extraction of the Sivers
+function is the single spin asymmetries (SSAs) in open
+charm production in semi-inclusive deep inelastic scattering (SIDIS) processes with a polarized proton target.
+Experimental facilities like the Electron-Ion Collider in
+China (EicC) and the Electron-Ion Collider (EIC) in the
+United States, with their capabilities in providing polarized beams, offer excellent platforms to explore these
+phenomena in depth. The kinematics variable definition
+are listed in Table I and some of them are shown in Fig.1.
+In this section, we present the theoretical expressions for SSA in open charm production in SIDIS.
+The extraction of the Sivers function relies on transverse momentum-dependent (TMD) factorization, which
+holds when the hard scale(either virtual photon’s four-
+
+2
+TABLE I. Kinematic variable definition.
+l and l′
+p and ph
+q = l − l′
+Q2 = −q 2
+xB = Q2 /(2p · q)
+y = p · q/(p · k)
+z = pp
+· ph /(p · q)
+W = (q + p)2
+ν = q · p/mN
+ϕh
+ϕS
+ph⊥
+
+LEON STRUCTURES AT …
+
+PHYS. REV. D 106, 094039 (2022)
+
+had
+ron
+pla
+ne
+
+lep
+as an example
+ton
+pla
+ne
+e-dimensional
+z
+ermination of
+existing world
+FIG. 1. The Trento conventions of SIDIS kinematic variables.
+lution as the FIG. 1. The Trento conventions of SIDIS kinematics variestimated by ables.
+usive charged
+momentum, and M is the nucleon mass. The transverse
+h ep and e3He
+antisymmetric tensor is
+In Sec. II, we momentum square or individual charm quark transverse
+to extract the momentum) is much larger than the total transverse moPρ qσ
+se SSA data, mentum of the charm
+Additionally,
+we ð6Þ
+focus
+ﬃ;
+pﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ϵμνρσ pair.
+ϵμν
+⊥ ¼ quark
+P
+·
+q
+1 þ the
+γ 2 unpolarized and
+A. The global on the small x region where the both
+ction are pre- spin dependent cross sections can be computed within
+1. Following
+the29].
+Trento
+the effective
+convention
+ϵ0123 ¼framework
+in Sec. IV. thewith
+CGC
+theory
+[13,
+Asconsuch,
+vention
+[47],
+we
+define
+the
+hadron
+transverse
+momentum
+the spin dependent odderon enters the polarized cross
+Ph⊥ and azimuthal angles in the virtual photon-nucleon
+SM
+section.
+frame,
+as illustrated
+in Fig.of
+1. the
+Thespin
+ϕh isdependent
+the angle from
+the
+The operator
+definition
+odderon
+a
+lepton
+plane
+to
+the
+hadron
+plane,
+and
+the
+ϕ
+is
+the
+angle
+2
+S
+O⊥ (xg , k⊥
+) can be given by the parameterization
+of the
+lepton plane to the transverse spin S⊥ of the
+a transversely 1Tfrom the
+dipole amplitude [30],
+nucleon. These variables can also be expressed in Lorentz
+ange approxiforms as
+s section as Z invariant
+d2 b⊥ d2 r⊥ −ik⊥ ·r⊥ 1 D 
+r⊥  † 
+r⊥ E
+e
+U
+b
++
+U
+b
+−
+⊥
+⊥
+(2π)2
+Nc
+2 qﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+xg
+qﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+
+
+μν
+μν
+FβUT þ   ;
+2
+2
+;
+l
+;
+¼+ [k−g
+P
+P
+¼
+−g
+l
+l
+hμ
+hν
+⊥
+μ
+ν
+⊥
+⊥
+= F xg P
+, kh⊥
+·
+b
+]
+O
+x
+,
+k
+⊥
+⊥
+g ⊥
+⊥
+
+
+μν
+
+ð4Þ
+lμ Phν
+g
+lμ Phν ϵμν
+1 ij
+⊥
+⊥ ⊥
+2
+− O1T
+sin ϕh ¼ −
+;
+cos
+ϕ⊥i
++
+ϵ⊥ S
+k⊥j
+x;g , k⊥
+h ¼
+l⊥ Ph⊥
+l⊥ Ph⊥
+M
+
+
+μν
+ lμ S⊥ν ϵμν
+1lμ S2⊥ν g2⊥ E
+2
+⊥
+2
+;
++ (k⊥cos
+· bϕ⊥S)¼−− k⊥
+b⊥ ;F xsin
+k⊥
+S ¼, −
+g, ϕ
+
+2
+l
+S
+l
+S
+2
+⊥ ⊥
+⊥ ⊥
+γ
+þ
+; ð5Þ
+(1)
+2xB
+where
+ation of the where U (x⊥ ) is the Wilson line in the funda μ ν by, μ U
+
+μ ν
+μ ν being2 given
+representation
+process, we mental
+γ
+q q P Pν (x⊥ ) =
+μν − q P þ P q þ
+gμν
+: ð7Þ
+¼
+g
+−
+⊥
+P · qð1 þ γ 2 Þ 1 þ γ 2 Q2
+M2
+
+P · Ph
+;
+P·q
+
++∞
+−
+−
+Peig −∞ dx A+ (x ,x⊥ ) . The other three terms in the
+above parameterization correspond to the spin independent gluon distribution, the spin independent odderon [13] and the gluon elliptical distribution [31], respectively. The odderon operator can be calculated using models such as the McLerran-Venugopalan (MV)
+model [32, 33] and the diquark model [22].
+
+R
+
+x
+
+The structure functions FUU and FβUT are functions of
+xB , zh , Ph⊥ , and Q. For the convenience to apply the QCD
+
+3
+EicC
+EicC low x B
+EicC high x B
+EIC
+
+2
+
+10
+
+y
+
+log (Q2/GeV2)
+
+ysics goals at
+on beam and
+the capability
+ons allows a
+ors [46]. The
+between JLab
+ts is expected
+aging of the
+ale and from
+
+The four-momentum of the incoming electron and the scattered electron
+The four-momentum of the incoming proton and the produced hadron
+The four-momentum of emitted virtual photon
+The negative square invariant momentum transfer of emitted virtual photon
+Bjorken scaling variable
+The fraction of the incoming electron’s energy transferred to the hadronic system
+The momentum fraction of the virtual photon to be carried by the produced hadron
+The center-of-mass energy of γ ∗ -Nucleon system
+The energy of γ ∗ in nucleon rest frame (mN is the mass of the nucleon)
+The angle between the hadron plane and lepton plane
+The angle from the lepton plane to the transverse spin S of the nucleon
+The hadron transverse momentum defined in the target rest frame with respect to the direction of the
+virtual photon
+
+1
+
+−4
+
+−3
+
+−2
+log10(x B)
+
+−1
+
+FIG. 2.
+The green and red regions show the kinematics
+coverages of EIC and EicC, respectively. Both coverages are
+with DIS cuts y < 0.85, Q2 > 2 GeV2 . The markers in shape
+black star, red triangle, green square and dark cyan cross
+represent the averaged kinematics of the EicC full xB coverage
+(EicC), EicC coverage within xB < 0.04 (EicC low xB ), EicC
+coverage within xB > 0.04 (EicC high xB ) and EIC coverage
+within EicC xB coverage (EIC).
+
+Through perturbative calculations, one can establish a
+relationship between the Sivers function and the odderon
+
+3
+as [16, 28]:
+⊥
+x, l⊥ =
+xf1T
+Z
+Z
+
+(2)
+k ⊥ · l⊥ ⊥
+Nc
+2
+dξ d2 k⊥ 2 O1T
+xg , k⊥
+A (l⊥ , k⊥ )
+4
+8π
+l⊥
+
+
+2
+
+where A(l⊥ , k⊥ ) is the perturbatively calculable hard coefficient which reads
+"
+#2
+l⊥ |l⊥ − k⊥ |
+l⊥ − k⊥
+A (l⊥ , k⊥ ) =
+.
+−
+2 + ξ (l − k )2
+|l⊥ − k⊥ |
+(1 − ξ)l⊥
+⊥
+⊥
+(3)
+We focus on the region where Q2 is significantly larger
+2
+than l⊥
+and also much larger than the saturation scale
+2
+Qs . In this kinematic regime, TMD factorization is applicable, while saturation effects remain significant. It
+has been demonstrated that the results of CGC effective
+theory and TMD factorization are consistent [34]. The
+spin independent cross section is
+y2
+
+4παe2 e2c (1 − y + 2 ) D(zh )
+dσ
+p2h⊥
+f
+(x,
+),
+=
+1
+dxB dydzh dph⊥
+Q2 y
+zh2
+zh2
+(4)
+and spin dependent cross section is
+d∆σ
+dxB dydzh dph⊥
+2
+
+4παe2 e2c (1 − y + y2 ) D(zh ) 1 ij
+p2
+⊥
+=
+ϵ⊥ S⊥i l⊥j f1T
+(x, h⊥
+),
+2
+2
+Q y
+zh M
+zh2
+(5)
+with d∆σ = dσ ↑ − dσ ↓ .
+The SSA for this process can be expressed as
+
+
+R
+dϕS dϕh dσ ↑ − dσ ↓ sin (ϕh − ϕS )
+R
+ASivers
+=
+2
+UT
+dϕS dϕh [dσ ↑ + dσ ↓ ]
+
+ph⊥ ⊥
+2
+2
+zh M f1T xB , ph⊥ /zh
+=
+(6)
+f1 (xB , p2h⊥ /zh2 )
+where ph⊥ denotes the transverse momentum of the produced hadron, zh , represents the momentum fraction of
+the produced hadron relative to the initial charm quark,
+and ϕS and ϕh are the azimuthal angles of the target’s
+transverse spin vector and the produced hadron’s transverse momentum, respectively.
+Focusing at EicC xB coverage, several kinematics
+points, shown as markers in Fig.2, are selected for theoretical calculation and comparison. The black star
+marker (EicC) represents averaged kinematics of the
+EicC full xB coverage. The red triangle marker (EicC low
+xB ) represents the averaged kinematics of EicC coverage
+within xB < 0.04 and the green square marker (EicC high
+xB ) represents the averaged kinematics of EicC coverage
+within xB > 0.04. The boundary xB = 0.04 is deterEicC
+EicC
+mined by Ncc
+(xB < 0.04) = Ncc
+(xB > 0.04). The
+
+dark cyan crossover marker (EIC) represents the averaged kinematics of EIC coverage within EicC xB coverage. The remaining four blue circle markers have no specific meaning and are only for theoretical comparison.
+We employ the numerical calculation scheme proposed
+by [16]. Fig.3 presents the results of ASivers
+as a function
+UT
+of the transverse momentum of the initial charm quark
+with the typical kinematics selected in Section II. We
+observe that ASivers
+increases as xB decreases and as Q2
+UT
+decreases at different kinematics regions.
+
+III.
+
+SIMULATION
+
+In this study, pythiaeRHIC (pythia 6.4) [35] is used
+as generator. The configurations are detailed in Ref. [36].
+The physics processes including vector-meson diffractive
+and resolved processes, semihard QCD 2 → 2 scattering, neutral boson scattering off heavy quarks within the
+proton, and photon-gluon fusion, are turned on.
+In Fig.2, the log10 (xB ) − log10 (Q2 ) distributions for
+EIC and EicC are shown in green and red, respectively.
+The beam settings are (i) electron (18 GeV) and proton
+(275 GeV) for EIC and (ii) electron (3.5 GeV) and proton
+(20 GeV) for EicC. Cuts (y < 0.85, Q2 > 2 GeV2 ) are applied to both EIC and EicC to guarantee well-definition
+of DIS kinematics. As shown in Fig.2, EicC is more concentrated at xB > 0.01 than EIC because of its lower
+center-of-mass (CMS) energy. Thus, EicC, comparing
+to EIC, will have more advantage for measurements at
+xB > 0.01.
+In this article, fast simulation method, which is also
+used in Ref. [37–39], is applied to simulate the detector
+response on physics measurements. In Ref. [37], the layouts of the tracking and vertex detectors of EicC have
+been proposed and described in detail. And the performances of the tracking and vertex detectors have also
+been studied and parameterized based on geant4 [40] in
+Ref. [37]. With that detector performance parameterization, a random normal distribution is added to the true
+information generated by pythia. Here, the variances of
+the normal distributions are the corresponding detector
+performance parameters. Because of the absence of Particle Identification (PID) detector simulation, a 3σ PID
+power is assumed in the future PID detector coverage
+listed in Table.II. A momentum cut-off as a function of
+η is applied to mimic PID detector performance.
+The processed tracks are used to reconstruct D0 /D0
+from channel D0 → π + K − with a branch ratio of 3.83%.
+The distributions of πK invariant mass within D0 mass
+region are fitted with the addition of a normal function
+
+TABLE II. PID acceptance for hadrons at different η regions.
+η
+pmax [GeV/c]
+
+[−3, −1)
+4
+
+[−1, 1)
+6
+
+(1, 3]
+15
+
+4
+
+(a)
+15
+
+10
+
+10
+
+(b)
+x B=0.08,Q2= 5.59
+x B=0.08,Q2= 7.39
+x B=0.08,Q2= 18.13
+
+A Sivers
+UT
+
+15
+
+-3
+A Sivers
+UT (×10 )
+
+5
+
+−3
+
+0 ×10
+0
+15
+
+0.5
+
+5
+x B=0.02,Q2= 3.78
+x B=0.02,Q2= 5.59
+x B=0.02,Q2= 18.13
+−3
+0 ×10
+1
+1.5
+2
+0
+(c)
+15
+p h /z
+
+1
+1.5
+x B=0.02,
+p h Q/ z2= 18.13
+x B=0.03,Q2= 18.13
+x B=0.08,Q2= 18.13
+
+(d) 2
+
+10
+A Sivers
+UT
+
+10
+
+0.5
+
+5
+
+5
+x B=0.02,Q2= 5.59
+x B=0.05,Q2= 5.59
+x B=0.08,Q2= 5.59
+
+0
+0
+
+0.5
+
+1
+
+0
+0
+
+1.5
+
+0.5
+
+1
+
+1.5
+
+2
+
+ph / z
+FIG. 3. Theory comparison at different kinematics point. In (a) and (b), Q2 are 5.59 and 18.13 respectively. Different line
+styles represent results with different xB . In (c) and (d), xB are 0.02 and 0.08 respectively. Different line styles represent results
+with different Q2 .
+
+for signal and a linear function for background to extract
+D0 /D0 counts. After
+√ the yield extraction, significance is
+calculated with S/ S + B where S is the signal counts of
+D0 /D0 reconstruction and B is the background counts of
+that. To get the maximal significance, three topological
+variables, including pair d0 , cos θrϕ and decayLengthrϕ ,
+are used to separate the signal and background. These
+topological variables are shown at Fig.5 and defined as
+below:
+• pair d0 is the closest distance between two daughter
+tracks.
+• cos θrϕ is the cosine value of the angle between the
+D0 decay length and the D0 momentum (in the rϕ
+plane).
+• decayLengthrϕ is the distance between the decay
+vertex and the reconstructed primary vertex (in the
+rϕ plane). Once paird0 is defined, two points that
+symbolize paird0 on each of the two tracks can be
+found. Then, the decay vertex of D0 is defined as
+the middle of the two points.
+
+After the topological variable calculation, the optimization of the criteria is performed by maximizing the significance iteratively. Figure.6 shows the significance of
+D0 (red points) and D0 (blue points). The red and blue
+lines in Figure.6 are corresponding to the best criteria for
+D0 and D0 , respectively.
+As shown in Fig.4, the plots in the first line and second
+line are the mass distributions of D0 and D0 , respectively.
+The topological cuts discussed above have been applied
+in these plots. The fit results for these mass distributions
+are shown as blue solid lines and the green dotted and
+red dashed lines are the fit results for background and
+signal, respectively.
+
+IV.
+
+RESULTS
+N −N
+
+The definition of AUT is AUT = P1 N↑↑ +N↓↓ . N↑ and N↓
+are the counts with two opposite polarization directions
+of the proton beams, respectively. P is polarizability of
+the proton beams of EicC, prospected to be 70%. The
+uncertainty of AUT can be easily calculated if ignoring
+
+5
+
+4
+
+1.10< ph− / z <1.55
+4000
+
+0.00< ph− / z <1.10
+
+0
+
+2
+
+2000
+
+1
+
+1000
+
+0
+4
+
+−
+D
+
+3000
+2000
+1000
+
+0
+
+0
+
+0
+
+4000
+
+3
+
+3000
+
+2
+
+2000
+
+1
+
+1000
+
+0
+
+Events/1.0 [MeV/
+
+3000
+
+1.8
+
+1.85
+
+1.9
+
+0
+
+Events/1.0 [MeV/
+
+3
+
+Events(×10 ) /1.0 [MeV/ c2]
+
+D
+3
+
+1.55< ph− / z <2.00
+4000
+
+1.8
+
+1.85
+
+MKπ
+
+3000
+2000
+1000
+0
+
+1.9
+
+1.8
+
+1.85
+
+1.9
+
+[GeV/c2]
+
+FIG. 4. The plots in the first and second line show the invariant mass distributions of D0 and D0 candidates, respectively.
+The addition of a linear function for background and a Gaussian function for signal are used to fit these mass distribution and
+the fit results are shown as blue solid lines. the green dotted red dashed lines represent the background fits and the signal fits,
+respectively.
+
+π
+
+Bkg
+
+K
+pair
+
+otal
+ATUT
+=
+
+=(
+
+𝑑0
+
++ N↑Signal − N↓Bkg − N↓Signal
+N↑T otal + N↑T otal
+
+N↑Signal + N↓Signal N↑Signal − N↓Signal
+N↑T otal + N↓T otal N↑Signal + N↓Signal
+
+Decay Vertex
+
++
+
+N↑Bkg + N↓Bkg N↑Bkg − N↓Bkg 1
+)
+N↑T otal + N↓T otal N↑Bkg + N↓Bkg P
+
+Decay length
+
+=
+
+N Signal Signal
+N Bkg Bkg
+A
++
+A
+UT
+N T otal
+N T otal UT
+
+𝜃
+
+𝐷0
+
+1 N↑
+P
+
+Primary Vertex
+
+FIG. 5. A diagram showing topological variables for reconstruction of D0 and D0
+
+the difference between N↑ and N↓ . There is ∆2 (AUT ) =
+1/N/P 2 , N = N↑ + N↓ . For D0 /D0 , the measured AUT
+is a mixture of signal and background. There is
+
+otal
+is measured within the D0 /D0 signal mass winATUT
+otal
+dow. Thus, ∆2 (ATUT
+) = 1/N T otal /p2 . N T otal is calculated within the signal mass region. ABkg
+UT is measured from the sideband. If the width of the sideband
+used in ABkg
+UT measurement is f times the width of the
+signal mass window, the counts for ABkg
+UT measurement
+will also be f times the background counts. There’s
+Bkg
+∆2 (ABkg
+/f /P 2 (f = 2 is taken as 2 in this
+UT ) = 1/N
+article). In addition, ASivers
+is the sin(ϕh − ϕS ) modulaUT
+tion component of√AUT . The statistical uncertainty of it
+is approximately 2 times larger than AUT . In the folof signal. Finally,
+lowing, ASivers
+is only used for ASivers
+UT
+UT
+if the uncertainties of the count measurements and the
+polarizability are ignored,
+s
+√
+2
+N Bkg
+Sivers
+∆(AUT ) =
+N T otal +
+.
+Signal
+PN
+f
+
+6
+250
+
+3.5 GeV × 20 GeV
+
+250
+
+250
+
+200
+
+200
+
+D0
+D0
+
+150
+
+150
+
+100
+0
+
+S / S +B
+
+S / S +B
+
+S / S +B
+
+200
+
+150
+
+100
+100
+
+200
+
+300
+
+100
+−0.5
+
+pair d 0 [µ m]
+
+0
+
+0.5
+
+cosθ r φ
+
+0
+
+20
+
+40
+
+60
+
+80
+
+100
+
+decayLength [µ m]
+rφ
+
+FIG. 6. Statistical uncertainty projections as a function of p⊥ /z for EicC are shown. Different panels represent the results
+of different xB coverages. The corresponding integral luminosity is 100 f b−1 . The kinematics points for theoretical calculation
+are labeled at the left-bottom corners for every panel. The xB coverages are 0.00843 < xB < 1 at (a), 0.00843 < xB < 0.0407
+at (b) and 0.0407 < xB < 1 at (c).
+
+With the formula above and the D0 /D0 reconstruction
+discussed at the previous section, the statistical uncerare projected and shown at Fig.7. The
+tainty of ASivers
+UT
+uncertaintyRprojections are corresponding to a integrated
+luminosity Ldt = 200 f b−1 . In Fig.7, the red solid and
+blue dashed lines represent the theory calculations of D0
+and D0 , respectively. Here, the calculation of D0 are considered as the opposite of that of D0 . The corresponding kinematics points of theory calculations of panel (a),
+(b) and (b) have been shown in Fig.2.In sequence, these
+kinematics points are EicC, EicC low xB , EicC high xB
+in Fig.2. The error bars with solid circle and empty box
+markers represent the projected statistical uncertainties
+for D0 and D0 , respectively. In Fig.7, panels (a), (b) and
+(c) show the projections of the EicC full xB coverage, the
+EicC low xB coverage and the EicC high xB coverage.
+The exact kinematics coverages are 0.00843 < xB < 1
+for the EicC full xB coverage, 0.00843 < xB < 0.0407 for
+the EicC low xB coverage and 0.0407 < xB < 1 for the
+EicC high xB coverage. The sign difference of D0 and
+reach 3σ in 1.5 < ph⊥ < 2 within the EicC full
+D0 ASivers
+UT
+xB coverage with a integrated luminosity 200 f b−1 .
+V.
+
+SUMMARY
+
+In summary, we derive the relation of the Sivers function and the odderon based on the CGC effective the-
+
+[1] A. Metz and J. Zhou, Distribution of linearly polarized
+gluons inside a large nucleus, Phys. Rev. D 84, 051503
+(2011), arXiv:1105.1991 [hep-ph].
+[2] Y. V. Kovchegov and M. D. Sievert, A New Mechanism
+for Generating a Single Transverse Spin Asymmetry,
+Phys. Rev. D 86, 034028 (2012), [Erratum: Phys.Rev.D
+86, 079906 (2012)], arXiv:1201.5890 [hep-ph].
+
+ory and TMD factorization, which corresponding to the
+experiment observable of SSA as ASivers
+UT . The signal of
+SSA is expected to be a sign change in terms of quark
+Sivers function and anti-quark Sivers function. A dedicated simulation is performed with generating D0 and
+D0 in PYTHIA by taking into account the resolutions,
+acceptance and responses from geant4 descriptions of
+EicC detector. The prospected statistical uncertainties
+are propagated to final ASivers
+as a function of ph⊥ /z in
+UT
+EicC kinematic coverage with a integrated luminosity of
+200 f b−1 . With this projection study it is promising that
+reach 3σ around
+the sign difference of D0 and D0 ASivers
+UT
+1.5 < ph⊥ < 2 within the EicC full xB region, which will
+be a chance to experimentally verify the theoretical prediction and provide an evidence for the existence of the
+elusive spin-dependent odderon.
+
+ACKNOWLEDGMENTS
+
+We gratefully acknowledge helpful discussions with
+Jian Zhou and Yuxiang Zhao.
+This work was supported by the National Natural Science Foundation of China with Grant Nos. (12375141,
+12205292 and 12061141008) and the Strategic Priority
+Research Program of Chinese Academy of Sciences with
+Grant No. XDB34030000.
+
+[3] Y. V. Kovchegov and M. D. Sievert, Sivers function in the
+quasiclassical approximation, Phys. Rev. D 89, 054035
+(2014), arXiv:1310.5028 [hep-ph].
+[4] F. Cougoulic and Y. V. Kovchegov, Helicity-dependent
+extension of the McLerran–Venugopalan model, Nucl.
+Phys. A 1004, 122051 (2020), arXiv:2005.14688 [hep-ph].
+[5] T. Altinoluk and R. Boussarie, Low x physics as an infinite twist (G)TMD framework: unravelling the origins
+
+7
+
+∫
+
+L dt=200 fb
+
+D0 20
+
+20
+
+1
+0
+
+−3
+0
+
+10
+0
+
+−10
+
+−1
+−2
+
+30
+
+(b)
+
+ASivers
+(x10-2)
+UT
+
+ASivers
+(x10-2)
+UT
+
+2
+
+30
+
+(a)
+
+(c)
+
+-1
+
+ASivers
+(x10-2)
+UT
+
+3
+
+0.5
+
+1
+
+D −20
+1.5
+
+−30
+0
+
+0
+
+−10
+
+0
+
+All EicC Coverage
+
+10
+
+−20
+
+x B<0.04
+0.5
+
+1
+
+1.5
+
+−30
+0
+
+x B>0.04
+0.5
+
+1
+
+1.5
+
+2
+
+ph /z [GeV/c]
+FIG. 7. Statistical uncertainty projections as a function of p⊥ /z for EicC are shown. Different panels represent the results
+of different xB coverages. The corresponding integral luminosity is 100 f b−1 . The kinematics points for theoretical calculation
+are labeled at the left-bottom corners for every panel. The xB coverages are 0.00843 < xB < 1 at (a), 0.00843 < xB < 0.0407
+at (b) and 0.0407 < xB < 1 at (c).
+
+of saturation, JHEP 10, 208, arXiv:1902.07930 [hep-ph].
+[6] I. Balitsky and A. Tarasov, Gluon TMD in particle
+production from low to moderate x, JHEP 06, 164,
+arXiv:1603.06548 [hep-ph].
+[7] T. Altinoluk, N. Armesto, G. Beuf, M. Martı́nez, and
+C. A. Salgado, Next-to-eikonal corrections in the CGC:
+gluon production and spin asymmetries in pA collisions,
+JHEP 07, 068, arXiv:1404.2219 [hep-ph].
+[8] S. Bhattacharya, D. Zheng, and J. Zhou, Accessing
+the gluon GTMD F1,4 in exclusive π0 production
+in ep collisions, Phys. Rev. D 109, 096029 (2024),
+arXiv:2304.05784 [hep-ph].
+[9] Y. Hatta, Y. Nakagawa, F. Yuan, Y. Zhao, and B. Xiao,
+Gluon orbital angular momentum at small-x, Phys. Rev.
+D 95, 114032 (2017), arXiv:1612.02445 [hep-ph].
+[10] R. Boussarie, Y. Hatta, and F. Yuan, Proton Spin Structure at Small-x, Phys. Lett. B 797, 134817 (2019),
+arXiv:1904.02693 [hep-ph].
+[11] S. Bhattacharya, R. Boussarie, and Y. Hatta, Exploring orbital angular momentum and spin-orbit correlation for gluons at the Electron-Ion Collider, (2024),
+arXiv:2404.04209 [hep-ph].
+[12] S. Bhattacharya, R. Boussarie, and Y. Hatta, Spin-orbit
+entanglement in the Color Glass Condensate, (2024),
+arXiv:2404.04208 [hep-ph].
+[13] J. Zhou, Transverse single spin asymmetries at small x
+and the anomalous magnetic moment, Phys. Rev. D 89,
+074050 (2014), arXiv:1308.5912 [hep-ph].
+[14] D. Boer, M. G. Echevarria, P. Mulders, and J. Zhou,
+Single spin asymmetries from a single Wilson loop, Phys.
+Rev. Lett. 116, 122001 (2016), arXiv:1511.03485 [hepph].
+[15] D. Boer, Y. Hagiwara, J. Zhou, and Y.-j. Zhou, Scale
+evolution of T-odd gluon TMDs at small x, Phys. Rev.
+D 105, 096017 (2022), arXiv:2203.00267 [hep-ph].
+[16] H. Dong, D.-X. Zheng, and J. Zhou, Sea quark
+Sivers distribution, Phys. Lett. B 788, 401 (2019),
+arXiv:1805.09479 [hep-ph].
+[17] Y. V. Kovchegov and M. G. Santiago, T-odd leadingtwist quark TMDs at small x, JHEP 11, 098,
+
+arXiv:2209.03538 [hep-ph].
+[18] S. Benić, D. Horvatić, A. Kaushik, and E. A. Vivoda,
+Odderon mechanism for transverse single spin asymmetry
+in the Wandzura-Wilczek approximation, Phys. Rev. D
+106, 114025 (2022), arXiv:2210.10353 [hep-ph].
+[19] M. G. Santiago, Spin-spin coupling at small x: Wormgear and pretzelosity TMDs, Phys. Rev. D 109, 034004
+(2024), arXiv:2310.02231 [hep-ph].
+[20] Y. V. Kovchegov and B. Manley, Orbital angular momentum at small x revisited, JHEP 02, 060, arXiv:2310.18404
+[hep-ph].
+[21] J. C. Collins, Leading twist single transverse-spin asymmetries: Drell-Yan and deep inelastic scattering, Phys.
+Lett. B 536, 43 (2002), arXiv:hep-ph/0204004.
+[22] S. J. Brodsky, D. S. Hwang, and I. Schmidt, Final state
+interactions and single spin asymmetries in semiinclusive
+deep inelastic scattering, Phys. Lett. B 530, 99 (2002),
+arXiv:hep-ph/0201296.
+[23] C. Boros, Z. T. Liang, and T. C. Meng, Quark spin
+distribution and quark anti-quark annihilation in single
+spin hadron hadron collisions, Phys. Rev. Lett. 70, 1751
+(1993).
+[24] X.-d. Ji, J.-P. Ma, and F. Yuan, Three quark light cone
+amplitudes of the proton and quark orbital motion dependent observables, Nucl. Phys. B 652, 383 (2003),
+arXiv:hep-ph/0210430.
+[25] K. Banu, N. Vasim, and R. Abir, Analytic interpolation
+between the Ji and Jaffe-Manohar definitions of the orbital angular momentum distribution of gluons at small
+x, Phys. Rev. D 105, 114033 (2022), arXiv:2106.03896
+[hep-ph].
+[26] B. Manley, Orbital angular momentum small-x evolution: exact results in the large-Nc limit, JHEP 04, 055,
+arXiv:2401.05508 [hep-ph].
+[27] Y. Hatta and J. Zhou, Small-x evolution of the
+gluon GPD Eg , Phys. Rev. Lett. 129, 252002 (2022),
+arXiv:2207.03378 [hep-ph].
+[28] Y. V. Kovchegov and M. G. Santiago, Quark sivers function at small x: spin-dependent odderon and the subeikonal evolution, JHEP 11, 200, [Erratum: JHEP 09,
+
+8
+186 (2022)], arXiv:2108.03667 [hep-ph].
+[29] L. D. McLerran and R. Venugopalan, Fock space distributions, structure functions, higher twists and small x,
+Phys. Rev. D 59, 094002 (1999), arXiv:hep-ph/9809427.
+[30] Y. Hatta, E. Iancu, K. Itakura, and L. McLerran, Odderon in the color glass condensate, Nucl. Phys. A 760,
+172 (2005), arXiv:hep-ph/0501171.
+[31] Y. Hatta, B.-W. Xiao, and F. Yuan, Probing the Small- x
+Gluon Tomography in Correlated Hard Diffractive Dijet
+Production in Deep Inelastic Scattering, Phys. Rev. Lett.
+116, 202301 (2016), arXiv:1601.01585 [hep-ph].
+[32] L. D. McLerran and R. Venugopalan, Computing quark
+and gluon distribution functions for very large nuclei,
+Phys. Rev. D 49, 2233 (1994), arXiv:hep-ph/9309289.
+[33] L. D. McLerran and R. Venugopalan, Gluon distribution functions for very large nuclei at small transverse
+momentum, Phys. Rev. D 49, 3352 (1994), arXiv:hepph/9311205.
+[34] C. Marquet, B.-W. Xiao, and F. Yuan, Semi-inclusive
+Deep Inelastic Scattering at small x, Phys. Lett. B 682,
+207 (2009), arXiv:0906.1454 [hep-ph].
+
+[35] T. Sjostrand, S. Mrenna, and P. Z. Skands, PYTHIA
+6.4 Physics and Manual, JHEP 05, 026, arXiv:hepph/0603175.
+[36] PYTHIA 6.4.28, Pythia 6.4.28, https://eic.github.
+io/software/pythia6.html, Last accessed on 2023-4-17.
+[37] D. P. Anderle, A. Guo, F. Hekhorn, Y. Liang, Y. Ma,
+L. Xia, H. Xing, and Y. Zhao, Probing gluon distributions with D0 production at the EicC, Phys. Rev. D 109,
+034021 (2024), arXiv:2307.16135 [nucl-ex].
+[38] S. Zhu, X. Huang, L. Xia, A. Guo, Y. Liang,
+Y. Zhang, and Y. Zhao, Study of charm hadronization and in-medium modification at the Electron-ion
+Collider in China, Phys. Rev. D 109, 014029 (2024),
+arXiv:2310.11754 [nucl-ex].
+[39] Z. Ji, X.-Y. Zhao, A.-Q. Guo, Q.-H. Xu, and J.-L. Zhang,
+Lambda polarization at the Electron-ion collider in
+China, Nucl. Sci. Tech. 34, 155 (2023), arXiv:2308.15998
+[nucl-ex].
+[40] S. Agostinelli et al. (GEANT4), GEANT4–a simulation
+toolkit, Nucl. Instrum. Meth. A 506, 250 (2003).
+
+

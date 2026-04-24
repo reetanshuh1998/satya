@@ -1,0 +1,1406 @@
+Tackling the kaon structure function at EicC
+Gang Xie,1, 2 Chengdong Han,2, 3 Rong Wang,2, 3, ∗ and Xurong Chen1, 2, 3, †
+1
+
+arXiv:2109.08483v1 [hep-ph] 17 Sep 2021
+
+Guangdong Provincial Key Laboratory of Nuclear Science, Institute of Quantum Matter,
+South China Normal University, Guangzhou 510006, China
+2
+Institute of Modern Physics, Chinese Academy of Sciences, Lanzhou 730000, China
+3
+School of Nuclear Science and Technology, University of Chinese Academy of Sciences, Beijing 100049, China
+(Dated: September 20, 2021)
+Measuring the kaon structure beyond the proton and pion structures is one of the hot topics in
+hadron physics, as it is one way to understand the nature of Nambu-Goldstone boson of QCD and to
+see the interplay between the EHM mechanism and the HB mechanism for hadron mass generation.
+In this paper, we present a simulation of the leading Λ baryon tagged deep inelastic scattering
+experiment at EicC (Electron-ion collider in China), which is engaged to unveil the internal structure
+of kaon through Sullivan process. According to our simulation results, the suggested experiment
+will cover the kinematical domain of 0.05 . xK . 0.85 and Q2 up to 50 GeV2 , with the acceptable
+statistical uncertainties. In the relatively low-Q2 region (< 10 GeV2 ), the Monte-Carlo simulation
+shows a good precision of the measurement (< 5%) for the kaon structure function F2K . In the
+high-Q2 region (up to 50 GeV2 ), the statistical uncertainty of F2K is also acceptable (< 10%) for the
+data at xK < 0.8. To perform such an experiment at an electron-ion collider, a high-performance
+zero-degree calorimeter is required.
+
+I.
+
+INTRODUCTION
+
+The majority of the Universe’s visible mass exist in
+the form of hadronic matter, and the underlying theory
+of hadrons is quantum chromodynamics (QCD). How the
+hadron acquires its mass is a fundamental and profound
+question [1–7], which is closely related to the confinement
+and the hadron structure. The color confinement and the
+nonperturbative structure of the hadrons are the peculiar challenging questions which attract a lot of interests.
+Studying the meson structure provides a new and excellent direction to understand the QCD predictions, since
+a meson is a simple object made of a quark and an antiquark in the quark model.
+There are two mass generating mechanisms for the
+hadron: Higgs Boson (HB) mechanism for the current
+quark mass and Emergent Hadron Mass (EHM) mechanism for the complex interactions of quarks and gluons
+[8, 9]. Dynamical chiral symmetry breaking is one of the
+features of QCD theory [10–12]. Based on the mass function of gluon from QCD’s Schwinger function, the gluon
+acquires a mass scale of m0 ∼ 0.43 GeV, at zero momentum [13–15]. In the infrared region, the quark also
+becomes heavy by radiations and absorptions of the gluons with the effective mass. A vivid metaphor is that
+the quark dresses up with gluons and turns into the
+constituent quark. For the proton mass decomposition
+the chiral-limit mass from dynamical chiral symmetry is
+dominant, while for the kaon mass decomposition the interference between HB and EHM plays a dominant role
+with no chiral-limit mass. Kaon is the Nambu-Goldstone
+boson mode of QCD, thus the kaon is massless if the chiral symmetry is non-explicitly broken. In the real world,
+
+∗ rwang@impcas.ac.cn
+† xchen@impcas.ac.cn
+
+the masses of the dressed quarks in kaon are largely canceled by the attraction potential based on the wave function calculation of two-body bound state [4, 5, 8, 16].
+Along with the emergence of the kaon mass, DysonSchwinger equations (DSE) predict a broadening quark
+distribution function for the light quarks at the hadronic
+scale (a quite low scale Q20 where only the valence components of a hadron are resolved by a probe) [6, 17–
+21]. Compared to the up valence quark distribution, the
+strange valence quark distribution is narrower, due to
+the heavier mass from HB mechanism. Measuring the
+kaon structure will give a critical test on this significant
+HB modulation of the EHM strange quark distribution
+[6, 21]. To completely understand the EHM phenomenon,
+we should answer simultaneously why the proton mass is
+heavy while the pion and kaon masses are light. Investigating the kaon structure provides a clear way to see
+the interplay between HB and EHM, due to the large
+coupling of strange quark to Higgs boson. Moreover, the
+kaon structure measurement will test the fruitful calculations from the nonperturbative approaches such as the
+continuum phenomenology of DSE [6, 18, 21–24] and lattice QCD (LQCD) [25–29].
+In experiment, the proton structure function has been
+measured precisely with the help of high energy lepton
+beams or colliders worldwide. However, the experimental data on the kaon structure function are extremely
+scarce. There are only eight data points related to the
+quark distribution inside kaon, which are accessed via
+the kaon-induced Drell-Yan process of NA3 experiment
+at CERN more than fourty years ago [30]. Therefore,
+more and more experimental projects are proposed, aiming for the better understandings on the kaon structure
+and the EHM mechanism in the pseudoscalar meson sector. On the AMBER facility at CERN, the implementation of kaon beam will provide an extraction of the parton
+distribution functions (PDFs) of real kaon from the Drell-
+
+2
+Yan reaction [31]. With the upgrade, the precision of the
+data at AMBER will supreme that of NA3 data. At JLab
+of 12GeV upgrade, the Λ tagged deep inelastic scattering
+(DIS) process will be exploited to study the structure of
+the virtual kaon [32, 33]. This approach is similar to the
+leading neutron tagged DIS performed at HERA decades
+ago [34, 35], for the determination of the pion structure
+function. To acquire the kaon structure over a wide range
+of Q2 and xK , a high center-of-mass (c.m.) energy of the
+scattering is required. Thus the electron-ion collider in
+US (US-EIC) [36–38] and in China (EicC) [7, 39, 40] will
+provide the good opportunities for realization of this goal.
+As there is almost no experimental data on kaon structure, there is also no global analysis of the kaon PDFs.
+Nevertheless in our previous work [41, 42], we have determined the kaon PDFs from a model-dependent analysis
+of the eight data points of NA3 experiment [30], based on
+the dynamical parton distribution model. According to
+the JAM analysis of pion PDFs [43], the addition of the
+leading neutron tagged DIS data of H1 [34] and ZEUS
+[35] significantly reduce the uncertainties of sea quark
+and gluon distributions. Similarly, the leading Λ tagged
+DIS data in the future will help fixing the sea quark and
+gluon distributions of the kaon.
+Now there are ongoing discussions on building a polarized electron-ion collider in China, by adding an electron
+beam to the high-intensity heavy ion accelerator facility
+[7, 39, 40]. The optimal c.m. energy of the collision at
+EicC will be around 17 GeV [40]. This would provide an
+excellent opportunity to probe the kaon structure in the
+range of 0.02 . xK . 1, i.e., from the sea quark region
+to the valence quark region. Judged by the c.m. energy, EicC bridges well the measurement at JLab-12GeV
+[32, 33] and the measurement at US-EIC [36–38], which
+will play an essential role in full mapping of the kaon
+structure. The AMBER facility at CERN [31] will run
+at the similar c.m. energy of EicC, but the measurement
+is on the Drell-Yan reaction, which is different from the
+tagged DIS process. Hence the direct comparison between AMBER data and EicC data at the similar scale
+will cross check each other and provide us a more definitive conclusion of the kaon structure in the sea quark and
+valence quark region. In this work, we suggest a kaon
+structure experiment at EicC via the leading Λ baryon
+tagged DIS process. The feasibility and impact of the
+experiment will be demonstrated based on a simulation.
+This work is similar to our previous simulation study of
+the pion structure at EicC [44].
+The organization of the paper is as follows. The underdiscussion EicC is briefly introduced in Sec. II. The
+model for the leading Λ baryon tagged DIS is described
+in Sec. III. The input kaon PDFs for the simulation is
+illustrated in Sec. IV. The invariant kinematic and finalstate kinematic distributions of the Monte-Carlo simulation are shown in Sec. V. The error projections of
+the proposed kaon structure function measurement are
+shown in Sec. VI. Finally, some discussions and a concise summary is given in Sec. VII.
+
+II.
+
+ELECTRON-ION COLLIDER IN CHINA
+
+The proposed polarized electron-ion collider in China
+is a future high energy nuclear physics project, aiming at
+the precise measurement of the nucleon structure in the
+sea quark region, the exotic hadron physics, the nuclear
+matter effect, etc. EicC will cover the variable c.m. energies from 15 to 20 GeV, with the luminosity above 1033
+cm−2 s−1 [40]. In this work, we assume EicC runs with
+the electron beam energy of 3.5 GeV and the proton beam
+energy of 20 GeV. The luminosity of EicC is around 100
+times of the previous HERA collider in Germany [34, 35].
+Therefore EicC will provide much precision data on the
+sea quark structures of the hadrons. EIC in US will focus
+on the gluon dominant region. In the future, much more
+details will be unveiled by the new facilities in the high
+precision era.
+For the conceptual design of EicC, the central detector
+and end-cap detector systems will be constructed inside
+and around the solenoid magnet with the cutting-edge
+technologies [40]. The far-forward detector complex of
+high performance will also be implemented in both beam
+directions, such as the Roman pot inside the beam pipe,
+the off-momentum detectors around the beam line, and
+the zero-degree calorimeter (ZDC). Thus the EicC facility will provide us a good opportunity to tag the high
+energy Λ baryon of high pseudorapidity, so as to measure
+the leading Λ tagged DIS. To reconstruct the Λ from the
+decay proton and π − encounters a lot of difficulties, due
+to the deflections of the charged particles by the complicated magnets around the beam pipe and the challenge
+of particle identifications of high energy electron, pion,
+kaon and proton. It is more doable to reconstruct the
+Λ baryon by measuring its neutral decay (neutron and
+π 0 ) with ZDC. Identifications of neutron and π 0 could
+be realized by differentiating the hadronic shower and
+the electromagnetic shower.
+
+III.
+
+LEADING Λ TAGGED DIS AND KAON
+STRUCTURE FUNCTION
+
+To probe the kaon structure in high-energy e − p collision, we exploit the abundant “kaon cloud” from proton
+dissociation due to the large coupling gN ΛK . This type
+of electron-“meson cloud” scattering dominates in the
+t channel with one meson exchange, called the Sullivan
+process [45], which is shown in Fig. 1. To make sure
+the electron beam hitting the “kaon cloud”, we need to
+tag the leading Λ of high energy and small transverse
+momentum. The Λ baryon acts as the spectator carrying a large fraction of the incoming proton’s momentum
+and going far-forward. To measure the kaon structure,
+we need also to make sure the virtual kaon is broken up
+by the high energy probe. In the literature, the internal
+structure of the quasi-real kaon in the process resembles
+the internal structure of the real kaon, as long as the
+momentum transfer is not large (. 0.9 GeV2 ) [46].
+
+3
+From this equation, we see that we can extract the four
+LΛ(4)
+fold leading-Λ structure function F2
+. In the kaon pole
+model, the leading-Λ structure function can be factorized
+into the product of the kaon structure function F2K and
+the kaon flux around the proton fK+ /p . In a effective
+theory of kaon pole, the kaon flux is given by [34, 35, 47],
+
+e'(P )
+e'
+
+e(Pe)
+γ *(q)
+X
+K*(P )
+K
+
+fK+ /p (xL , t) =
+
+p(Pp)
+
+
+
+2
+2
+(3)
+1 gNΛK
+−t
+2 t − mK
+exp
+−R
+(1 − xL ) 2
+,
+ΛK
+2
+2π 4π
+(mK − t)
+1 − xL
+
+Λ(PΛ)
+
+FIG. 1. The Sullivan process [45] for deep inelastic scattering
+with the production of a leading Λ baryon. The leading Λ
+carries a great amount of the momentum of the beam proton.
+
+The invariant kinematical variables describing the
+leading Λ tagged DIS are: the momentum square of the
+photon probe Q2 , the Bjorken variable xB , the inelasticity y of the scattering, the longitudinal momentum fraction xL carried by the Λ baryon, and the square of the
+momentum transfer from the proton to the virtual kaon
+t. According to the momenta of the particles labeled in
+Fig. 1, these kinematical variables are defined as,
+Q2 ≡ −q 2 ,
+2
+
+Q
+,
+2Pp · q
+Pp · q
+y≡
+,
+Pp · P e
+PΛ · q
+,
+xL ≡
+Pp · q
+
+xB ≡
+
+(1)
+
+t ≡ (Pp − PΛ )2 = p2K .
+In definition, xL denotes the longitudinal momentum
+fraction (energy fraction approximately) of the final Λ
+baryon to the incoming proton. In the DIS experiment,
+the leading Λ tagged process dominates in the large-xL
+region (& 0.5), hence a proper cut on the xL variable selects efficiently the events that are sensitive to the kaon
+structure. t denotes momentum square of the virtual
+kaon, which is an important variable for the extrapolation of the real kaon structure.
+In order to estimate the statistical error of the measurement, we need to know the number of events of interest.
+Therefore we need first to know the cross section of the
+reaction. With the azimuthal angle integrated, the fourfold differential cross section of the leading Λ tagged DIS
+is written as [34, 35, 47],
+
+2
+in which the coupling is gNΛK
+/4π = 14.7, and RΛK = 1
+−1
+GeV is a form-factor parameter represents the radius of
+the Λ − K Fock state of the proton. With these formulae
+above, we can compute the cross section of the leading Λ
+baryon tagged DIS process.
+
+IV.
+
+PARTON DISTRIBUTION FUNCTIONS OF
+KAON
+
+For estimating the cross section and building a event
+generator for the process, the last input is the PDFs of
+kaon. Since there is almost no experimental data on kaon
+structure, there is no global analysis on the kaon PDFs.
+Therefore in this work, we use the kaon PDFs provided
+by an model-dependent analysis of the NA3 data only
+[41]. This analysis is based on the dynamical parton
+distribution model with only valence quark distributions
+at Q20 , where the sea quark and gluon distributions are
+completely produced from the QCD fluctuations. Fig. 2
+shows the ratios of the kaon ū distribution to the pion ū
+distribution, compared to the NA3 data. The experimental data indicate that the kaon up quark distribution is
+lower that the pion up quark distribution in the valence
+region. We see that the used kaon PDFs in this work
+are consistent with the only experimental data obtained
+decades ago [30].
+
+With the cross section model described in last section
+and the kaon PDFs, we calculate the differential cross
+section of leading Λ tagged DIS as a function of xL ,
+which is displayed in Fig. 3. The experimental data and
+the model prediction for the differential cross section of
+leading neutron tagged DIS process are also shown in
+the figure. We see that the cross section of leading Λ
+tagged process is much smaller than that of leading neutron tagged process. The other finding is that the cross
+
+
+section of leading Λ tagged DIS dominates in relatively
+4
+2
+2
+d σ(ep → eΛX)
+4πα
+y
+LΛ(4)
+=
+1−y+
+F2
+(Q2 , xB , xL , t)lower xL region. This is because the “kaon cloud” (of
+2
+4
+dxB dQ dxL dt
+xB Q
+2
+heavier mass than the “pion cloud”) also carries a decent
+
+
+
+
+2
+2
+4πα
+y
+xB
+amount of the momentum of the beam proton. Hence in
+K
+2
+=
+1−y+
+F2
+, Q fK+ /p (xL , t).
+the analysis, we should a lower cut on xL to select the
+xB Q4
+2
+1 − xL
+events of interests.
+(2)
+
+4
+
+1.5
+
+Q2 = 20 GeV2
+
+uK / uπ
+
+1
+
+CERN-NA3 data
+
+0.5
+
+IMParton analysis
+0
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1
+
+x
+FIG. 2. Comparison of the model predicted ratio uK /uπ [41]
+as a function of x with CERN-NA3 experimental data [30].
+
+8
+LN DIS, JAM18
+
+4
+
+50
+
+0.4
+
+0.6
+
+xL
+
+0.8
+
+1
+
+Q2 (GeV2)
+
+0.2
+
+104
+
+30
+
+103
+
+20
+
+0
+0
+
+1
+
+1
+
+DISTRIBUTIONS OF INVARIANT AND
+FINAL-STATE KINEMATICS
+
+Following the theoretical framework discussed in the
+above two sections, we develop a event generator program of leading Λ tagged DIS process. In the simulation,
+the electron beam energy is taken to be 3.5 GeV and the
+proton beam energy is taken to be 20 GeV. The z direction of coordinate is chosen to be the momentum of the
+incoming proton beam. In order to efficiently generate
+the events in the kinematic region of interests, we set the
+following ranges of kinematics in the Monte-Carlo simulation: xB,min < xB < 1, 1 GeV2 < Q2 < 50 GeV2 ,
+
+102
+
+10
+
+10
+
+10
+
+1
+
+0
+0
+
+104
+
+1
+
+3
+
+10
+
+0.6
+102
+
+0.4
+
+0.2 0.4 0.6 0.8
+xk
+
+1
+
+0
+
+0.4
+
+0.6
+
+xL
+
+0.8
+
+1
+
+1
+
+1
+
+103
+102
+
+0.5
+10
+
+10
+
+0.2
+
+V.
+
+103
+
+0.8
+y
+
+FIG. 3. The one-fold differential cross section as a function
+of the longitudinal momentum fraction xL of the far-forward
+Λ. The cross section of leading Λ tagged DIS is based on
+the model described in this work. The cross section of leading neutron tagged DIS is taken from the reference [44] for
+comparison, which is based on the JAM pion PDFs [43].
+
+0.2 0.4 0.6 0.8
+xB
+
+104
+
+30
+20
+
+102
+
+10
+
+105
+
+40
+Q2 (GeV2)
+
+40
+
+2
+
+0
+
+50
+105
+
+-t (GeV2)
+
+dσ/dxL (nb)
+
+Leading Λ DIS
+
+6
+
+0.01 GeV2 < −t < 1 GeV2 , and 0.5 < xL < 1.
+Fig. 4 shows the cross-section weighted invariant kinematic distributions of the leading Λ tagged DIS events
+simulated, which are projected in two dimensional spaces.
+The events are mainly distributed in low Q2 , small xB ,
+small xK , and small y region. Fig. 5 shows the energy
+and pseudorapidity distributions of the final-states: electron, Λ, and the neutral decays of Λ (neutron and π 0 ).
+We see that all the scattered electrons can be collected
+with the central detectors at EicC, while the leading Λ of
+high energy and large rapidity can only be detected with
+the forward detectors. The decay neutron of Λ mainly
+distribute around the pseudorapidity of 5. The decay
+π 0 of Λ mainly distribute around the pseudorapidity of
+3.5. There is a small portion of π 0 going to the end-cap
+detector system.
+To investigate with more details on the forward Λ decay, we show the distributions of the two photons from
+π 0 decay as well. Fig. 6 shows the energy and θ angle
+distributions of Λ, n, π 0 , and γ. We see that most of
+the neutrons from Λ decay go to ZDC. However, some
+photons of low energy from π 0 decay go to the central
+and end-cap detectors, and some photons of high energy
+π 0 decay go to ZDC. To get rid of the background noise
+of the detector, we set the low-energy threshold to 200
+MeV for the high energy photon detection. According to
+the conceptual design of EicC, we choose the θ angle cut
+to be θγ < 3◦ or 6◦ < θγ < 174◦ .
+
+0
+0
+
+0.5
+xk
+
+1
+
+1
+
+FIG. 4. The distributions of the invariant kinematical variables Q2 , xB , xK , xL , y, and −t, for the simulation data of Λ
+baryon tagged DIS at EicC.
+
+The decay vertex of the leading Λ from Sullivan process is displayed in Fig. 7, which could provide some
+guidance for the future analysis of the vertex reconstruction. The decay vertex is close to the beam line with a
+small transverse distance. The decay vertex is about 80
+cm from the production vertex, which could be used as
+
+5
+105
+
+10
+
+−2
+
+3
+
+3
+
+10
+
+102
+
+10
+10
+
+6
+8
+η of neutron
+
+10
+
+10
+
+4
+
+5
+6
+η of Λ
+
+7
+
+8
+
+6
+
+104
+
+15
+
+10
+
+10
+
+1
+
+0
+2
+η of electron
+
+2
+
+103
+102
+
+15
+
+10
+
+10
+0
+
+1
+
+2
+3
+θ of Λ (°)
+
+4
+
+2
+10
+
+4
+
+6
+0
+η of π
+
+8
+
+10
+
+1
+
+103
+
+4
+102
+
+2
+
+0
+0
+
+102
+
+10
+
+10
+
+2
+
+40
+6
+θ of π (°)
+
+8
+
+1
+
+1
+
+2
+3
+θ of n (°)
+
+4
+
+1
+
+103
+
+4
+102
+
+2
+
+0
+0
+
+102
+
+−5
+
+10
+
+0
+5
+Vertex x (cm)
+
+1
+
+140
+
+104
+
+120
+
+103
+
+100
+
+102
+
+80
+
+10
+
+60
+−5
+
+0
+5
+Vertex x (cm)
+
+1
+
+FIG. 7. The distributions of the decay vertex of the forward
+high-energy Λ baryon, for the simulation data of Λ baryon
+tagged DIS at EicC.
+
+10
+
+6
+E of γ (GeV)
+
+6
+
+103
+
+15
+
+5
+0
+
+1
+
+0
+
+−5
+
+102
+
+20
+E of n (GeV)
+
+E of Λ (GeV)
+
+20
+
+103
+
+103
+
+FIG. 5. The Monte-Carlo simulated energy and pseudorapidity distributions of the measured final-state particles: electron
+and Λ. The distributions of the decays (neutron and π 0 ) of Λ
+are also shown.
+104
+
+5
+
+104
+
+4
+
+0
+2
+
+1
+
+1
+
+Vertex y (cm)
+
+102
+
+2
+
+103
+
+15
+
+Vertex z (cm)
+
+103
+
+E of Λ (GeV)
+
+4
+
+4
+
+E of π0 (GeV)
+
+104
+
+104
+104
+
+0
+
+E of neutron (GeV)
+
+20
+
+E of π0 (GeV)
+
+E of electron (GeV)
+
+6
+
+10
+
+10
+20
+θ of γ (°)
+
+30
+
+1
+
+FIG. 6. The energy and θ angle distributions of high momentum far-forward Λ baryon and its decay chains, for the
+simulation data of Λ baryon tagged DIS at EicC.
+
+a cut to select the leading Λ tagged DIS events.
+
+VI. STATISTICAL ERROR PROJECTIONS OF
+KAON STRUCTURE FUNCTION AT EICC
+
+To estimate the statistical error of the kaon structure
+function, we simply need to estimate the statistical error
+of the cross section, since these two experimental observable are directly related. The statistical uncertainty of
+
+the cross section measurement depends on the number of
+events collected in the experiment. To estimate the number of events of a experiment, we need to know the cross
+section of the reaction (provided by the model described
+above), the integrated luminosity of the experiment, and
+the event selection criteria of the reaction. For a year
+running of good quality beams, EicC could accumulate
+about 50 fb−1 integrated luminosity of e − p collisions.
+Hence we take the integrated luminosity of 50 fb−1 for the
+simulation. To make sure the collected events are mainly
+from electron-“kaon cloud” collisions, we take the following event selection criteria: xL > 0.55, PTΛ < 0.5 GeV,
+MX > 1 GeV, W > 2 GeV. xL > 0.55 and PTΛ < 0.5 GeV
+ensure the events are from Sullivan process of t channel,
+and W > 2 GeV is the usual DIS criterium. Fig. 8
+shows the energy and pseudorapidity distributions of the
+Λ and its decays, after the event selection criteria, the geometrical acceptance of the detectors and the low energy
+threshold of the calorimeters. The zero-degree calorimeter is required to cover the angle from 0 to 3 degrees
+around the beam, to collect more neutrons and photons.
+To get the cross section at each kinematical point, we
+need to count the number of events in different kinematical bins. The typical kinematical binning is shown in
+Fig. 9, for the events in the Q2 range of (3, 5) GeV2 . We
+focus on the events at relatively small |t| (< 0.85 GeV2 ),
+a condition suggested by DSE calculation to make sure
+the extrapolation to the real kaon structure valid and ef-
+
+6
+Mx > 1 GeV, W > 2 GeV, x L > 0.55
+γ
+
+γ
+
+102
+
+15
+10
+
+10
+0
+
+2
+3
+θ of Λ (°)
+
+4
+
+E of π0 (GeV)
+
+θn < 3°, θ < 3° or 6° < θ < 174°
+γ
+
+4
+
+102
+
+2
+
+0
+0
+
+10
+
+2
+
+40
+6
+θ of π (°)
+
+8
+
+γ
+
+15
+
+102
+
+10
+
+10
+
+103
+
+PΛT < 0.5 GeV, Eγ > 0.2 GeV
+γ
+
+γ
+
+6
+
+Mx > 1 GeV, W > 2 GeV, x L > 0.55
+
+PΛT < 0.5 GeV, Eγ > 0.2 GeV
+
+θn < 3°, θ < 3° or 6° < θ < 174°
+
+5
+0
+
+1
+
+103
+
+Mx > 1 GeV, W > 2 GeV, x L > 0.55
+
+1
+
+2
+3
+θ of n (°)
+
+4
+
+Mx > 1 GeV, W > 2 GeV, x L > 0.55
+PΛT < 0.5 GeV, Eγ > 0.2 GeV
+
+103
+
+θn < 3°, θ < 3° or 6° < θ < 174°
+γ
+
+γ
+
+4
+102
+
+2
+
+0
+0
+
+1
+
+1
+
+10
+
+10
+20
+θ of γ (°)
+
+30
+
+1
+
+FIG. 8. The energy and θ angle distributions of high momentum far-forward Λ baryon and its decay chains, with the geometric cut and energy threshold of electromagnetic calorimeters applied, for the simulation data of Λ baryon tagged DIS
+at EicC.
+
+1
+
+-t (GeV2)
+
+102
+
+0.5
+
+matical bins. For the detectors of common performance,
+we assume γ = 90% for detecting and identifying the
+photons from π 0 decay, and n = 50% for detecting and
+identifying the far-forward neutrons. Finally the relative
+statistical error of kaon structure function √
+δ(F2K )/F2K in
+each kinematical bin is estimated to be 1/ Ni .
+By counting the simulated events in each kinematical
+bin, we calculate the statistical uncertainty of the kaon
+structure function for the proposed experiment at EicC.
+Fig. 10 shows the relative statistical error of F2K in the
+kinematical bin of 3 GeV2 < Q2 < 5 GeV2 . We see in the
+plot that the statistical uncertainty goes up with the xK
+increasing up. For the data at xK < 0.3, the projected
+statistical uncertainty is smaller than 1%. With the xK
+increasing up around 0.85, the statistical uncertainty is
+around 5%. These precise data in the future will provide
+an excellent test of the predictions of lattice QCD and
+DSE. At higher Q2 up to 50 GeV2 , the statistical uncertainty projections are also projected and depicted in
+Fig. 11 (Q2 ∼ 25 GeV2 ) and Fig. 12 (Q2 ∼ 40 GeV2 ).
+With wider kinematical bins and fewer data points, the
+estimated statistical precision of F2K measurement is still
+good. For the data points in the region of xK < 0.6, the
+relative statistical uncertainties are less than 5%. And
+for the data points in the region of xK < 0.8, the relative statistical uncertainties are less than 10%. These
+experimental data over a wide range of Q2 will provide
+us an interesting opportunity to test the QCD evolution
+equations in the kaon sector, and to extract the gluon
+distribution in the kaon via the scaling violation.
+
+10
+
+40
+
+3 GeV2 < Q2 < 5 GeV2, Mx > 1 GeV, W > 2 GeV
+
+0
+
+1
+
+1
+
+0.5
+xk
+
+θn < 3°, θ < 3° or 6° < θ < 174°
+
+1
+
+γ
+
+FIG. 9. The binning scheme in −t versus xK plane for the
+Monte-Carlo data in Q2 range of (3, 5) GeV2 .
+
+fective [46]. With the event selection criteria discussed in
+the above paragraph, we calculate the number of events
+in each bin, with the following formula,
+Ni = Lσ i Br ∆xK ∆Q2 ∆xL ∆t(1 − xL ),
+
+(4)
+
+where L is the integrated luminosity of the suggested
+experiment, σ i is the averaged differential cross section
+in kinematical bin i, Br is the branching ratio of Λ decaying into neutron and two photons,  is the detector
+efficiency for collecting all the final states of the reaction,
+i.e.  = n ∗ γ1 ∗ γ2 , the factor (1 − xL ) is the Jacobian
+coefficient for the transform from xB space to xK space,
+and the other factors together express the size of the kine-
+
+-t (GeV2)
+
+0
+
+xL > 0.55, PΛT < 0.5 GeV, Eγ > 0.2 GeV, EicC 50 fb-1
+γ
+
+0.5
+
+0
+
+0
+0
+
+0.5
+xk
+
+1
+
+Statistical error of Fk2 (%)
+
+6
+
+1
+
+E of n (GeV)
+
+θn < 3°, θ < 3° or 6° < θ < 174°
+
+E of γ (GeV)
+
+E of Λ (GeV)
+
+20
+
+20
+
+103
+
+PΛT < 0.5 GeV, Eγ > 0.2 GeV
+
+−40
+
+FIG. 10. The statistical error projections of the kaon structure function at Q2 ∼ 4 GeV2 . We calculate the statistical
+error at each bin center. The right axis is a scale indicating
+how large the statistical error is.
+
+7
+
+1
+
+40
+
+xL > 0.55, PΛT < 0.5 GeV, Eγ > 0.2 GeV, EicC 50 fb-1
+θn < 3°, θ < 3° or 6° < θ < 174°
+
+-t (GeV2)
+
+γ
+
+γ
+
+0.5
+
+0
+
+0
+0
+
+0.5
+xk
+
+1
+
+Statistical error of Fk2 (%)
+
+20 GeV2 < Q2 < 30 GeV2, Mx > 1 GeV, W > 2 GeV
+
+−40
+
+FIG. 11. The statistical error projections of the kaon structure function at Q2 ∼ 25 GeV2 . We calculate the statistical
+error at each bin center. The right axis is a scale indicating
+how large the statistical error is.
+
+1
+
+40
+
+xL > 0.55, PΛT < 0.5 GeV, Eγ > 0.2 GeV, EicC 50 fb-1
+θn < 3°, θ < 3° or 6° < θ < 174°
+
+-t (GeV2)
+
+γ
+
+γ
+
+0.5
+
+0
+
+0
+0
+
+0.5
+xk
+
+1
+
+Statistical error of Fk2 (%)
+
+30 GeV2 < Q2 < 50 GeV2, Mx > 1 GeV, W > 2 GeV
+
+−40
+
+FIG. 12. The statistical error projections of the kaon structure function at Q2 ∼ 40 GeV2 . We calculate the statistical
+error at each bin center. The right axis is a scale indicating
+how large the statistical error is.
+
+VII.
+
+DISCUSSIONS AND SUMMARY
+
+The leading Λ tagged DIS experiment at EicC has been
+simulated to study the kaon structure function. The
+charged decays (p and π − ) from Λ of high energy are
+deflected by the beam magnets and they are difficult to
+be separated from the beam protons. Moreover, particle identifications of the high-energy charged particles
+around the beam pipe and beam magnets are very challenging. It is more doable to measure the neutral decays
+(n and π 0 ) of Λ with ZDC, since the neutral particles are
+not deflected by the beam magnets. From our simulation, the high energy neutrons are collected with ZDC,
+
+while the photons from π 0 decay are collected with both
+ZDC and end-cap electromagnetic calorimeter in the interaction region of EicC.
+We suggest the ZDC at EicC cover the θ angle from 0
+to 3 degrees in order to collect the forward neutrons as
+many as possible. The angular resolution (position resolution) and energy resolution of ZDC should be studied
+with more details in the future. It is critical to has a
+small angular resolution for two reasons. First, the small
+angular resolution of ZDC is important for measuring the
+t-dependence of the cross section, so as to perform a good
+extrapolation to the real kaon structure. Second, we need
+a small angular resolution to separate the clusters of the
+energy depositions of the multiple neutral particles. For
+the shashlik calorimeter, the position resolution can be
+smaller than 1 cm, which is quite promising. The particle
+identification ability of ZDC is also important for the success of the experiment. The longitudinal profiles of the
+electromagnetic and hadronic showers are different. It
+is a mature technology to differentiate the photons from
+the neutrons with the implementation of a pre-shower.
+From our simulation, the conclusion is that the kaon
+structure experiment at EicC is feasible with the highperformance zero-degree calorimeter. We have made the
+projections on the statistical errors of the kaon structure
+function based on a cross section model of Λ tagged DIS,
+with an assumed integrated luminosity of 50 fb−1 and
+the acceptances of the conceptual EicC detectors. At
+the collision c.m. energy around 17 GeV, EicC covers a
+broad kinematical range of 0.05 . xK . 0.9 and with the
+resolution scale Q2 up to 50 GeV2 . In the small xK and
+low Q2 region (< 10 GeV2 ), the statistical uncertainty is
+smaller than 1%. At high xK ∼ 0.85 and a low Q2 ∼ 4
+GeV2 , the statistical uncertainty is just around 5%. At
+high Q2 and with fewer kinematical bins, the statistical
+uncertainties are less than 5% for the data points in the
+region of xK < 0.6. This kind of precision will reveal
+the difference between the pion PDF and kaon PDF in
+the valence and sea quark regions. The gluon distribution of the kaon also can be extracted with the scaling
+violation described by QCD evolution equations, thanks
+to the wide Q2 coverage of EicC. The future leading Λ
+tagged DIS experiment will provide a lot of details of the
+interplay between EHM mechanism and HB mechanism,
+by determining the strange valence quark distribution in
+the kaon, which has a much larger coupling to the Higgs
+boson compared to up quark or down quark. In summary,
+the future EicC experiment on kaon structure has the impacts to reveal the nature of the quasi Nambu-Goldstone
+particle in QCD, to answer why the kaon mass is small
+(compared to hyperon), and to test the nonperturbative
+predictions such as LQCD and DSE calculations.
+
+ACKNOWLEDGMENTS
+
+We thank Prof. Craig D. Roberts for suggestions and
+discussions. This work is supported by the Strategic
+
+8
+Priority Research Program of Chinese Academy of Sciences under the Grant NO. XDB34030301, the National
+Natural Science Foundation of China under the Grant
+
+NO. 12005266 and the Guangdong Major Project of Basic and Applied Basic Research under the Grant No.
+2020B0301030008.
+
+[1] X.-D. Ji, Phys. Rev. Lett. 74, 1071 (1995), arXiv:hepph/9410274.
+[2] X. Ji and Y. Liu, Sci. China Phys. Mech. Astron. 64,
+281012 (2021), arXiv:2101.04483 [hep-ph].
+[3] C. Lorcé, Eur. Phys. J. C 78, 120 (2018),
+arXiv:1706.05853 [hep-ph].
+[4] C. D. Roberts, in 27th International Nuclear Physics
+Conference (2019) arXiv:1909.12832 [nucl-th].
+[5] C. D. Roberts and S. M. Schmidt, Eur. Phys. J. ST 229,
+3319 (2020), arXiv:2006.08782 [hep-ph].
+[6] Z.-F. Cui, M. Ding, F. Gao, K. Raya, D. Binosi,
+L. Chang, C. D. Roberts, J. Rodrı́guez-Quintero,
+and S. M. Schmidt, Eur. Phys. J. A 57, 5 (2021),
+arXiv:2006.14075 [hep-ph].
+[7] X. Chen, F.-K. Guo, C. D. Roberts, and R. Wang, Few
+Body Syst. 61, 43 (2020), arXiv:2008.00102 [hep-ph].
+[8] C. D. Roberts, D. G. Richards, T. Horn,
+and
+L. Chang, Prog. Part. Nucl. Phys. 120, 103883 (2021),
+arXiv:2102.01765 [hep-ph].
+[9] J. Arrington et al., J. Phys. G 48, 075106 (2021),
+arXiv:2102.11788 [nucl-ex].
+[10] C. D. Roberts and A. G. Williams, Prog. Part. Nucl.
+Phys. 33, 477 (1994), arXiv:hep-ph/9403224.
+[11] F. T. Hawes, C. D. Roberts, and A. G. Williams, Phys.
+Rev. D 49, 4683 (1994), arXiv:hep-ph/9309263.
+[12] P. Maris and C. D. Roberts, Phys. Rev. C 56, 3369
+(1997), arXiv:nucl-th/9708029.
+[13] D. Binosi, C. Mezrag, J. Papavassiliou, C. D. Roberts,
+and J. Rodriguez-Quintero, Phys. Rev. D 96, 054026
+(2017), arXiv:1612.04835 [nucl-th].
+[14] J. Rodrı́guez-Quintero, D. Binosi, C. Mezrag, J. Papavassiliou, and C. D. Roberts, Few Body Syst. 59, 121 (2018),
+arXiv:1801.10164 [nucl-th].
+[15] Z.-F. Cui, J.-L. Zhang, D. Binosi, F. de Soto, C. Mezrag,
+J. Papavassiliou, C. D. Roberts, J. Rodrı́guez-Quintero,
+J. Segovia, and S. Zafeiropoulos, Chin. Phys. C 44,
+083102 (2020), arXiv:1912.08232 [hep-ph].
+[16] P. Maris, C. D. Roberts, and P. C. Tandy, Phys. Lett.
+B 420, 267 (1998), arXiv:nucl-th/9707003.
+[17] L. Chang, I. C. Cloët, C. D. Roberts, S. M. Schmidt,
+and P. C. Tandy, Phys. Rev. Lett. 111, 141802 (2013),
+arXiv:1307.0026 [nucl-th].
+[18] C. Shi, C. Chen, L. Chang, C. D. Roberts, S. M.
+Schmidt, and H.-S. Zong, Phys. Rev. D 92, 014035
+(2015), arXiv:1504.00689 [nucl-th].
+[19] K. Raya, L. Chang, M. Ding, D. Binosi,
+and
+C. D. Roberts, in 18th International Conference on
+Hadron Spectroscopy and Structure (2020) pp. 565–569,
+arXiv:1911.12941 [nucl-th].
+[20] M. Ding, K. Raya, D. Binosi, L. Chang, C. D. Roberts,
+and S. M. Schmidt, Phys. Rev. D 101, 054014 (2020),
+arXiv:1905.05208 [nucl-th].
+[21] Z.-F. Cui, M. Ding, F. Gao, K. Raya, D. Binosi,
+L. Chang, C. D. Roberts, J. Rodrı́guez-Quintero, and
+S. M. Schmidt, Eur. Phys. J. C 80, 1064 (2020).
+[22] T. Nguyen, A. Bashir, C. D. Roberts, and P. C. Tandy,
+
+Phys. Rev. C 83, 062201 (2011), arXiv:1102.2448 [nuclth].
+[23] C. Chen, L. Chang, C. D. Roberts, S. Wan, and H.-S.
+Zong, Phys. Rev. D 93, 074021 (2016), arXiv:1602.01502
+[nucl-th].
+[24] C. Shi, C. Mezrag, and H.-s. Zong, Phys. Rev. D 98,
+054029 (2018), arXiv:1806.10232 [nucl-th].
+[25] J.-H. Zhang, L. Jin, H.-W. Lin, A. Schäfer, P. Sun, Y.-B.
+Yang, R. Zhang, Y. Zhao, and J.-W. Chen (LP3), Nucl.
+Phys. B 939, 429 (2019), arXiv:1712.10025 [hep-ph].
+[26] J.-W. Chen, H.-W. Lin, and J.-H. Zhang, Nucl. Phys. B
+952, 114940 (2020), arXiv:1904.12376 [hep-lat].
+[27] H.-W. Lin, J.-W. Chen, Z. Fan, J.-H. Zhang,
+and R. Zhang, Phys. Rev. D 103, 014516 (2021),
+arXiv:2003.14128 [hep-lat].
+[28] R. Zhang, C. Honkala, H.-W. Lin, and J.-W. Chen, Phys.
+Rev. D 102, 094519 (2020), arXiv:2005.13955 [hep-lat].
+[29] C. Alexandrou, S. Bacchio, I. Cloet, M. Constantinou,
+K. Hadjiyiannakou, G. Koutsou, and C. Lauer (ETM),
+Phys. Rev. D 103, 014508 (2021), arXiv:2010.03495 [heplat].
+[30] J. Badier et al. (Saclay-CERN-College de France-Ecole
+Poly-Orsay), Phys. Lett. B 93, 354 (1980).
+[31] B. Adams et al., (2018), arXiv:1808.00848 [hep-ex].
+[32] “Measurement of Tagged Deep Inelastic Scattering
+(TDIS),”
+https://www.jlab.org/exp_prog/
+proposals/14/PR12-14-010.pdf (), accessed: 2021-0916.
+[33] “Measurement of Kaon Structure Function through
+Tagged
+Deep
+Inelastic
+Scattering
+(TDIS),”
+https://www.jlab.org/exp_prog/proposals/17/
+C12-15-006A.pdf (), accessed: 2021-09-16.
+[34] F. Aaron et al. (H1), Eur. Phys. J. C 68, 381 (2010),
+arXiv:1001.0532 [hep-ex].
+[35] S. Chekanov et al. (ZEUS), Nucl. Phys. B 637, 3 (2002),
+arXiv:hep-ex/0205076.
+[36] R. Abdul Khalek et al., (2021), arXiv:2103.05419
+[physics.ins-det].
+[37] A. Accardi et al., Eur. Phys. J. A 52, 268 (2016),
+arXiv:1212.1701 [nucl-ex].
+[38] A. C. Aguilar et al., Eur. Phys. J. A 55, 190 (2019),
+arXiv:1907.08218 [nucl-ex].
+[39] X. Chen, PoS DIS2018, 170 (2018), arXiv:1809.00448
+[nucl-ex].
+[40] D. P. Anderle et al., Front. Phys. (Beijing) 16, 64701
+(2021), arXiv:2102.09222 [nucl-ex].
+[41] C. Han, G. Xie, R. Wang, and X. Chen, Eur. Phys. J.
+C 81, 302 (2021), arXiv:2010.14284 [hep-ph].
+[42] “lukeronger/piIMParton,”
+https://github.com/
+lukeronger/piIMParton, accessed: 2020-09-01.
+[43] P. C. Barry, N. Sato, W. Melnitchouk, and C.-R. Ji,
+Phys. Rev. Lett. 121, 152001 (2018), arXiv:1804.01965
+[hep-ph].
+[44] G. Xie, M. Li, C. Han, R. Wang, and X. Chen, Chin.
+Phys. C 45, 053002 (2021), arXiv:2009.04956 [hep-ph].
+[45] J. Sullivan, Phys. Rev. D 5, 1732 (1972).
+
+9
+[46] S.-X. Qin, C. Chen, C. Mezrag, and C. D. Roberts, Phys.
+Rev. C 97, 015203 (2018), arXiv:1702.06100 [nucl-th].
+[47] H. Holtmann, G. Levman, N. N. Nikolaev, A. Szczurek,
+
+and J. Speth, Phys. Lett. B 338, 393 (1995), arXiv:hepph/9602229.
+
+
