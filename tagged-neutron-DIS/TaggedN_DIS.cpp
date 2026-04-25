@@ -287,7 +287,6 @@ double TaggedN_DIS::F2_pi_IMParton(double xpi, double Q2){
 	   + 1.0/9.0*(pionPDFIMP->getPDF(2,xpi,Q2) + pionPDFIMP->getPDF(-2,xpi,Q2) + pionPDFIMP->getPDF(3,xpi,Q2) + pionPDFIMP->getPDF(-3,xpi,Q2));
 	return xpi * y;
 }
-//// return cross-section in the unit of nb/GeV^4.
 double TaggedN_DIS::d4sigma_dQ2dxBdxLdt_GRV(double Q2, double xB, double xL, double t)
 {
 	double _xpi = xB / (1-xL);
@@ -296,7 +295,7 @@ double TaggedN_DIS::d4sigma_dQ2dxBdxLdt_GRV(double Q2, double xB, double xL, dou
         double alpha2 = pow(1/137.0, 2);
       	double f_pi_in_p = 1/2.0/PI * 13.6 * (1-xL) * (-t)/pow(mpi*mpi-t, 2) * exp(-0.93*0.93*(mpi*mpi-t)/(1-xL));
 	//// return cross-section in nb.
-	double sigma = 3.881e5 * 4*PI*alpha2 /xB /pow(Q2,2) * (1.0-_y+_y*_y/2.0) * _F2pi * f_pi_in_p;
+	double sigma = 3.893793e5 * 4*PI*alpha2 /xB /pow(Q2,2) * (1.0-_y+_y*_y/2.0) * _F2pi * f_pi_in_p;
 	if(xpi>0.999)return -30;
 	//// return 0.0 if the value is NaN.
 	if(!(sigma==sigma))return -20;

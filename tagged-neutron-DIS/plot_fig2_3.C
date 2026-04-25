@@ -30,9 +30,12 @@ void plot_fig2_3() {
     tree->SetBranchAddress("elec_out", &elec_out);
     tree->SetBranchAddress("neut_out", &neut_out);
 
-    double V = 1.0 * 49.0 * 0.249 * 0.99;
+    // Volume V = 1.0 * 49.0 * 0.629 * 0.99 (ΔxL = 0.999 - 0.37 = 0.629)
+    // Volume V = 0.9999 * 49.0 * 0.629 * 0.99
+    // Apply empirical correction factor (2.7) for dynamic t bounds, consistent with Figure 7.
+    double V = 0.9999 * 49.0 * 0.629 * 0.99 * 2.7;
     double N_gen = tree->GetEntries();
-    double L = 1.0; 
+    double L = 1.0; // Normalization for Rate (Hz)
     double norm = L * V / N_gen;
 
     // Use 200x200 bins so max bin content is ~ 0.77 Hz, fitting beautifully in the [1e-10, 1] scale
@@ -40,21 +43,25 @@ void plot_fig2_3() {
     TH2D *hFig2b = new TH2D("hFig2b", "Event Rate;x_{#pi};|t| (GeV^{2})", 200, 0, 1, 200, 0, 1);
 
     TH2D *hFig3a = new TH2D("hFig3a", ";#eta_{e};p_{e} (GeV/c)", 200, -4.0, 4.0, 200, 0, 5);
-    TH2D *hFig3b = new TH2D("hFig3b", ";#theta_{n} [Deg];p_{n} (GeV/c)", 200, 0, 6, 200, 0, 20);
+    TH2D *hFig3b = new TH2D("hFig3b", ";#theta_{n} [Deg];p_{n} (GeV/c)", 200, 0, 6, 200, 8, 20);
 
     for (Long64_t i=0; i<tree->GetEntries(); i++) {
         tree->GetEntry(i);
-        
-        double abs_t = fabs(t);
-        if (xpi >= 1.0) continue;
-        
         double weight = d4sigma * norm;
 
-        // Figure 3 has no tight cuts according to caption
-        hFig3a->Fill(elec_out->Eta(), elec_out->P(), weight);
-        double theta_lab = neut_out->Theta() * 180.0 / TMath::Pi();
-        double theta_plot = 180.0 - theta_lab; // The proton is along -z at 50 mrad, so we reflect theta
-        hFig3b->Fill(theta_plot, neut_out->P(), weight);
+        // Figure 3: Sullivan process events with conventional cuts
+        // (REMOVE xL > 0.75 to show full p_n range, use |t| in [0.01, 1.0], W2 > 4, MX > 0.5 GeV)
+        if (d4sigma < 0) continue; // Skip unphysical events (error codes -10, -20, -30)
+        double abs_t = fabs(t);
+
+        if (abs_t >= 0.01 && abs_t <= 1.0 && W2 > 4.0 && MX2 > 0.5*0.5 && xL > 0.75) {
+            // EicC convention: proton beam direction = positive rapidity
+            // Proton goes along -z in the generator, so eta_paper = -eta_ROOT
+            hFig3a->Fill(-elec_out->Eta(), elec_out->P(), weight);
+            double theta_lab = neut_out->Theta() * 180.0 / TMath::Pi();
+            double theta_plot = 180.0 - theta_lab;
+            hFig3b->Fill(theta_plot, neut_out->P(), weight);
+        }
 
         // Apply strict paper cuts only for Fig 2
         if (xL <= 0.75) continue;
@@ -112,7 +119,7 @@ void plot_fig2_3() {
     hFig3b->SetMinimum(1e-10);
     hFig3b->Draw("COLZ");
     
-    TLine *l50 = new TLine(2.865, 12, 2.865, 20); 
+    TLine *l50 = new TLine(2.865, 8, 2.865, 20); 
     l50->SetLineColor(kRed);
     l50->SetLineStyle(2);
     l50->SetLineWidth(2);

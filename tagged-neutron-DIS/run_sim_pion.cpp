@@ -13,7 +13,7 @@ void run_sim_pion(int nEvents = 1000000){
 	dis.SetTmax(1.0);
 	dis.SetTmin(0.01);
 	dis.SetxLmax(0.999);
-	dis.SetxLmin(0.75); // As per Fig 2 caption: 0.75 < xL < 1
+	dis.SetxLmin(0.37); // Lowest mathematically possible value before |t| < 1.0 constraint rejects events
 
 	dis.SetxBmax(1.0);
 	dis.SetxBmin(0.0001);

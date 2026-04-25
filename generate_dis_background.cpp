@@ -39,7 +39,7 @@ int main() {
     tree->Branch("id", &id, "id/I");
 
     // Number of events.
-    int nEvents = 300000; 
+    int nEvents = 100; 
 
     for (int iEvent = 0; iEvent < nEvents; ++iEvent) {
         if (!pythia.next()) continue;
@@ -87,6 +87,11 @@ int main() {
     pythia.stat();
     tree->Write();
     f->Close();
+    
+    // Print the generated cross section
+    double sigma_gen_mb = pythia.info.sigmaGen();
+    std::cout << "Pythia 8 DIS cross-section (mb): " << sigma_gen_mb << std::endl;
+    std::cout << "Pythia 8 DIS cross-section (nb): " << sigma_gen_mb * 1e6 << std::endl;
 
     return 0;
 }
