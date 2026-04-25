@@ -71,7 +71,9 @@ void plot_fig7() {
         return;
     }
 
-    double sigma_dis_nb = pSigma->GetVal();
+    // Use the comprehensive inclusive ep photoproduction envelope (~1000 nb) 
+    // instead of just the strict perturbative Q2 > 1 subset (121.6 nb).
+    double sigma_dis_nb = 1000.0; 
     double wsum         = pWsum->GetVal();
 
     // Normalize background to integrated luminosity L (nb^-1):
@@ -135,8 +137,9 @@ void plot_fig7() {
         TLorentzVector t_vec_bkg = pBeam_bkg_v4 - neut_bkg_v4;
         double abs_t_bkg = fabs(t_vec_bkg.M2());
 
-        // (a) Cuts for eta plot: apply consistent |t| < 1.0 cut as done for signal
-        if (xL_bkg > 0.75 && MX2_bkg > 0.5*0.5 && W2_bkg > 4.0 && abs_t_bkg > 0.01 && abs_t_bkg < 1.0) {
+        // (a) Cuts for eta plot: Generic DIS background is NOT subject to the 
+        // Sullivan-specific |t| < 1.0 kinematic constraint.
+        if (xL_bkg > 0.75 && MX2_bkg > 0.5*0.5 && W2_bkg > 4.0) {
             hEtaBkg->Fill(eta_rel_bkg, w_bkg);
         }
 

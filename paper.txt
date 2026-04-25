@@ -1,0 +1,809 @@
+Feasibility Study of Pion and Kaon Structure via the Sullivan
+Process at EicC
+Zongyang Lua , Zihan Yua , Ting Lina , Yu-Tie Liangb,c ,
+Rong Wangb,c , Wan Changd , and Weizhi Xionga
+Key Laboratory of Particle Physics and Particle Irradiation (MOE),
+arXiv:2512.01720v1 [hep-ex] 1 Dec 2025
+Institute of Frontier and Interdisciplinary Science,
+Shandong University, Qingdao, Shandong 266237, China
+Institute of Modern Physics, Chinese Academy of Sciences, Lanzhou 730000, China
+University of Chinese Academy of Sciences, Beijing 100049, China and
+School of Physics and Electronic Engineering,
+Nanyang Normal University, Nanyang 473061, China
+Abstract
+The Electron
+Ion Collider in China (EicC) provides an excellent opportunity to explore the
+internal structure of pions and kaons via the Sullivan process in deep-inelastic scattering (DIS).
+In this study, we present detailed projections for the pion and kaon structure functions, F2
+ and
+F2K , at EicC, with a focus on both statistical and systematic uncertainties. Leveraging EicC
+high luminosity and broad kinematic coverage, the accessible kinematic region is extended beyond
+previous measurements. The projected statistical uncertainties for F2
+ and F2K are below 5%
+and 8%, respectively, across most kinematic bins. Systematic uncertainties arising from detector
+effects have been carefully evaluated. These results significantly enhance the precision of meson
+structure function measurements and provide important constraints on theoretical models of meson
+parton distributions. Moreover, this study bridges the gap between fixed-target and collider-era
+measurements, highlighting the pivotal role of EicC in advancing our understanding of hadronic
+structure.
+INTRODUCTION
+The pion is the lightest meson, while the kaon is the lightest meson containing a strange
+quark in the Standard Model, with each composed of a quark
+antiquark pair bound by the
+strong interaction. Their simplicity makes them ideal probes of Quantum Chromodynamics
+(QCD), the theory describing the strong force. Pions are nearly ideal realizations of pseudoNambu
+Goldstone bosons [1, 2], arising from the spontaneous breaking of chiral symmetry in
+QCD, while kaons provide an essential window into the interplay between light and strange
+quarks. Together, they form a unique platform for exploring the low-energy domain of QCD,
+where perturbative methods break down and nonperturbative dynamics dominate [3
+Recent progress in lattice QCD [7
+11], Dyson
+Schwinger method [12
+16], and effective
+field theories [17
+19], together with high-energy scattering experiments [20
+34], has enabled increasingly precise investigations of pion and kaon structure. These studies have
+advanced our knowledge of their electromagnetic form factors, parton distribution functions
+(PDFs), and generalized parton distributions (GPDs). Data from facilities such as Jefferson
+Lab [35
+39], HERA [40] experiments including H1 [41] and ZEUS [42], CERN fixed-target
+experiments [43, 44], and the future Electron
+Ion Collider (EIC) [45
+47], combined with
+theoretical developments, have revealed that mesons are far from pointlike: their internal
+structure is significantly more intricate than suggested by constituent-quark models [6, 48].
+Despite these advances, a comprehensive understanding of their partonic structure remains
+incomplete.
+A powerful method to access the structure of these unstable mesons is the Sullivan process [8, 9, 49, 50], in which deep-inelastic scattering off the virtual meson cloud of a nucleon,
+effectively providing a pion or kaon target. This approach overcomes the limitation of
+mesons
+ short lifetimes and has been validated in previous experiments for pions [41, 42, 51].
+For kaons, the method presents additional challenges due to the suppressed strange-quark
+component in the nucleon
+s meson cloud, but it remains a viable strategy for extracting
+their partonic structure [6].
+The EicC [52] offers a unique opportunity to probe the internal structure of hadrons with
+particular emphasis on the sea-quark region. In this work, we develop a production model
+based on the Sullivan process to investigate the structure of pions and kaons. By examining
+the relevant kinematics and detector requirements, we present detailed projection studies
+of their structure function at EicC. The remainder of this paper is organized as follows:
+Section 2 outlines the theoretical framework and the implementation of the Sullivan process
+in our analysis. Section 3 describes the conceptual design of the experimental setup and the
+strategies for event selection and analysis. Section 4 presents the main results, including
+comparisons with theoretical predictions and existing data. Finally, Section 5 summarizes
+the key findings and discusses prospects for future research.
+KINEMATICS AND CROSS SECTION
+Figure 1 shows the Feynman diagrams for semi-inclusive leading neutron (a) and 
+ (b)
+production in collisions via the Sullivan process. In this framework, the process ep 
+ eXB,
+where B represents the leading baryon, provides access to the structure of unstable mesons.
+The process is fully described by four kinematic variables:
+Q = 
+q = 
+ k ) ,
+xB =
+W 2 = (P + k 
+ )2 = m2p +
+Q2 (1 
+ xB )
+where k, P , k 
+ , and N represent the four-momenta of the incoming electron (e), proton (p),
+scattered electron (e
+ ), and leading baryon (n or 
+), respectively, and mp is the proton mass.
+When probing the pion structure, the final-state baryon is a neutron (B = n); for the kaon
+structure, it is a 
+ (B = 
+). In this process, the energy fraction of the final-state hadron
+xL , and the squared four-momentum transfer of the target proton t, are expressed as:
+xL =
+t = (P 
+ N )2
+respectively. The exchanged virtual pion or kaon can then be treated as an effective target.
+Analogous to the Bjorken variable, the momentum fraction of the struck constituent inside
+the meson is defined as:
+xM =
+2PM 
+e(k)
+e(k)
+ (q)
+ (q)
+K (PK )
+p(P )
+p(P )
+n(Nn )
+FIG. 1. Sullivan process in DIS. (a) Pion case: the proton emits a virtual 
+ + and transitions into
+a neutron. (b) Kaon case: the proton emits a virtual K + and transitions into a 
+Thus, the differential cross section for leading neutron or 
+ production in the process
+ XB can be written as [41, 42, 53]
+d4 (
+ eXB)
+LB(4)
+(Q2 , xB , xL , t)
+dxB dQ2 dxL dt
+xB Q 4
+, Q fM/p (xL , t),
+xB Q 4
+LB(4)
+where M = 
+ + or K + , and F2
+(Q2 , xB , xL , t) denotes the semi-inclusive structure funcLB(4)
+tion. In this expression, the leading-baryon structure function F2
+factorizes into the
+meson structure function F2M and the meson flux surrounding the proton, fM/p .
+In the effective field theory, the meson flux is typically evaluated at the pion or kaon
+pole [54
+61],
+1 g2
+ m2M
+ xL )
+exp CRBM
+fM/p (xL , t) =
+(m2M 
+ t)2
+where mM is the meson mass. For pions and kaons, the relevant coupling constants are
+g = gpn
+ and g = gN 
+K , with gpn
+ = 13.6 [62] and gN
+K /4
+ = 14.7 [56], respectively.
+The interaction radii are Rn
+ = 0.93 GeV
+1 [60] for the n 
+ system and R
+K = 1.0 GeV
+[56] for the 
+ K system. The parameter C is an auxiliary sign factor introduced to unify
+the expression: C = 1 for the n 
+ system and C = 
+1 for the 
+ K system.
+III.
+EICC DETECTOR
+EicC is a proposed high-energy nuclear physics facility designed to probe the internal
+structure of hadrons, with particular emphasis on the sea-quark region, as well as to investigate exotic hadronic states and the properties of nuclear matter [52, 63, 64]. With a
+tunable center-of-mass energy of 15
+20 GeV and a luminosity exceeding 1033 cm
+1 , EicC
+will enable unprecedented precision in measurements of sea-quark dynamics. The collider is
+designed to operate by default with a 3.5 GeV electron beam and a 20 GeV proton beam,
+achieving a luminosity nearly two orders of magnitude higher than that of the former HERA
+[40] collider in Germany, thereby providing a wealth of high-precision data on hadron structure. A central detector and a set of forward detectors constitute key components of the EicC
+experimental setup. The central detector provides large acceptance, with a pseudorapidity
+coverage from 
+3.5 to 3.5, enabling comprehensive tracking and particle identification
+over a wide kinematic region. The forward detectors are optimized for detecting leading
+baryons and mesons produced at high pseudorapidity, particularly from beam remnants and
+diffractive processes. Complementary to the U.S. Electron
+Ion Collider, which focuses on
+the gluon-dominated regime at higher energies, EicC will play a crucial role in advancing
+the next era of precision nuclear physics research.
+To assess the feasibility of measuring the pion and kaon structure functions at the
+EicC via the Sullivan process, we performed dedicated Monte Carlo simulations focusing
+on channels involving pion and kaon structure. The detector response was modeled using the EicC fast simulation framework [65
+67]. Event generation was carried out with
+the Tagged-neutron-DIS [58, 68] and Tagged-Lambda-DIS [56, 69] generators, both implemented in C++ and based on the CERN ROOT framework [70]. For the LN-DIS process, the
+generator incorporates comparisons among the global JAM18 fit [71], available experimental
+data, and predictions from the dynamical parton model. In particular, the pion PDFs were
+taken from the piIM-Parton set [72, 73], derived within the dynamical parton distribution
+framework. For the L
+-DIS process, where information on the kaon structure is highly limited and only a few global kaon PDF analyses exist [74
+77], the generator employs a kaon
+PDF obtained from a model-dependent analysis constrained solely by the NA3 data [78],
+also within the dynamical parton model framework.
+Figure 2 illustrates the event distributions of the generated LN-DIS process within the
+selected kinematic region. As shown in the left panel, the events populate a broad kinematic
+phase space, with a higher density observed at relatively small Q2 and xB , where the virtual
+photon predominantly probes low-momentum partons in the meson cloud. Under the applied
+selection cuts, xB extends up to approximately 0.25. In contrast, the right panel displays the
+event distribution in the (x
+ , t) plane, covering almost the entire accessible kinematic range.
+|t| (GeV2)
+Rate (HZ)
+0.05
+0.15
+0.25
+Rate (HZ)
+Q (GeV2)
+FIG. 2. Event rates for the LN-DIS process at the EicC, obtained from Monte Carlo simulation
+and shown as two-dimensional histograms of invariant kinematic variables. Left panel: distribution
+in (xB , Q2 ). Right panel: distribution in (x
+ , |t|). The MC events were generated within the
+kinematic region 0.01 GeV2 < |t| < 1 GeV2 , 0.75 < xL < 1, xB < 1, 1 GeV2 < Q2 < 50 GeV2 ,
+pn (GeV/c)
+Rate (HZ)
+Rate (HZ)
+pe (GeV/c)
+and W 2 > 4 GeV2 .
+50 mrad
+ n [Deg]
+FIG. 3. For the Sullivan process ep 
+ enX, the left panel shows the correlation between the
+scattered electron momentum and pseudorapidity 
+, while the right panel depicts the relationship
+between the detected neutron momentum and scattering (polar) angle. The distributions are
+approximately symmetric with respect to the incident proton beam, which is designed to have a
+crossing angle of 50 mrad (about 2.86
+). All cases correspond to the energy setting of a 3.5 GeV
+electron colliding with a 20 GeV proton. The distributions for the ep 
+X process exhibit a
+similar pattern.
+A clear correlation is visible, with the event density gradually decreasing from the small-x
+small-|t| region toward the large-x
+ , large-|t|region. This behavior reflects the characteristic
+t-dependence of the meson-exchange mechanism inherent to the Sullivan process. Over6
+ECal
+DIRC
+Coil
+RICH
+2.3. DETECTOR CONCEPT
+10 m
+15 m
+FIG. 4. Conceptual design of the EicC detector, with the central and ion far-forward detectors
+included.
+all, these distributions confirm the expected kinematic features of meson-exchange
+induced
+DIS and demonstrate the feasibility of probing meson structure via leading-baryon tagged
+measurements at the EicC. In the LN-DIS process, the scattered electron and the produced
+hadronic system originate from a hard interaction between the virtual photon and the meson
+cloud surrounding the proton. As shown in Figure 3, the scattered electrons are primarily
+distributed within the central rapidity region (|
+| < 3.5) with a broad momentum range,
+where the central detector of the EicC provides precise tracking and particle identification
+with an efficiency exceeding 95%. In contrast, the final-state neutron emerges at a very
+small angle relative to the incident proton beam, typically within a few tens of milliradians,
+while carrying a large fraction of the proton
+s initial momentum. This kinematic feature
+underscores the need for a dedicated far forward detection system.
+As illustrated in Fig. 4, the EicC far-forward detector system consists of several subdetectors, including the Endcap Dipole Tracker (EDT), Roman Pots (RP), Off-Momentum
+Detector (OMD), and the Zero Degree Calorimeter (ZDC). These detectors operate collaboratively to reconstruct neutrons, photons, and charged hadrons produced at extremely small
+scattering angles.
+The ZDC detects neutrons within approximately 15 mrad of the ion-beam direction and
+Figure 2.8: Conceptual design of the EicC detector, with the central and ion far-forward detectors
+included.
+Pixel + MPGD
+MPGD: Micro Pattern Gaseous Detector
+ToF: Time-of-Flight
+DIRC: Detection of Internally Reflected Cherenkov
+RICH: Ring Imaging Cherenkov Detector
+ECal: Electro-Magnetic Calorimeter
+EDT: Endcap Dipole Tracker
+RP: Roman Pot
+ZDC: Zero Degree Calorimeter
+OMD: Off-Momentum Detector
+provides sufficient performance for reconstructing the four-momentum transfer t. According
+to simulation studies, the ZDC achieves an energy resolution of
+48.7%
++ 1.9%,
+E [GeV]
+and a transverse position resolution of
+3 cm
+E [GeV]
+corresponding to an angular resolution of approximately 2.1 mrad/
+E [GeV] at a dis-
+tance of 14 m from the IP. This performance enables a typical t resolution of about 0.03 GeV2 .
+The EDT, RP, and OMD jointly reconstruct the charged decay products of the 
+ baryon
+produced in the L
+-DIS process. The 
+ decays predominantly via the charged channel (
+ , BR 
+ 64%) and the neutral channel (
+, BR 
+ 36%). Reconstructing
+this topology requires the combined acceptance of all forward detectors.
+For charged decay channel, the proton is reconstructed using the combined tracking
+information from the EDT, RP, and OMD. The EDT provides tracking in 15 mrad < 
+60 mrad with a momentum resolution of
+ 0.6%,
+and a polar-angle resolution better than 3 mrad. The RP extends charged-particle tracking
+down to 5 mrad and achieves an improved momentum resolution of
+ 0.2%.
+The OMD captures low-momentum decay protons with 0.4 < xL < 0.75, requiring a spatial resolution of order 100 
+m, achievable with Monolithic Active Pixel Sensors (MAPS)
+or Micro-Pattern Gaseous Detectors (MPGDs). The 
+ from the decay is accepted and
+reconstructed solely by the EDT tracking system.
+For neutral decay channel, the neutron is tagged by the ZDC, while the two photons from
+the 
+ 0 decay are jointly reconstructed using the ZDC, the EDT electromagnetic calorimeter
+(EDT-ECal), and the hadron-endcap ECal of the central detector.
+The capability of reconstructing 
+ baryons over a wide kinematic range is particularly
+relevant for studies of the kaon structure via the Sullivan process. In such measurements,
+the final-state 
+ carries critical information about the kaon, and efficient reconstruction
+of its decay products directly impacts the precision and reach of the structure-function
+extraction. Therefore, the performance of the far-forward detector system
+both in charged
+and neutral decay channels
+is a key factor in determining the sensitivity of kaon-structure
+Rate [HZ/m]
+measurements.
+0.22
+3.5 
+ 20 GeV
+ 41 GeV
+0.18
+ 100 GeV
+0.16
+0.14
+0.12
+0.08
+0.06
+0.04
+0.02
+ Vertex Decay Z [m]
+FIG. 5. Distribution of the 
+ decay vertex along the z direction for final-state 
+ at different
+collision energies.
+With this capability in place, the EicC offers unique advantages for studying the kaon
+structure. Since the kaon structure is accessed via the Sullivan process, the reconstruction
+of the 
+ baryon in the final state is essential. The 
+ has a relatively long lifetime of
+ = (2.617 
+ 0.010) 
+10 s [79], meaning that at high beam energies its decay length can
+easily exceed several tens of meters. Figure 5 shows the distribution of the 
+ decay vertex
+along the flight direction at different collision energies. For the typical EicC configuration of
+3.5 
+ 20 GeV, more than 95% of 
+ baryons decay within 5 m of the interaction point
+well
+within the coverage of the forward detector system. In contrast, for the lower-energy EIC
+configuration of 5 
+ 41 GeV, only about 80% of 
+ baryons decay within 5 m, and this
+fraction drops below 60% for higher energies such as 5 
+ 100 GeV. Consequently, under
+comparable luminosity conditions, the EicC detector is expected to have a higher detection
+efficiency for kaon-structure measurements. Moreover, the larger crossing angle allows for a
+more spacious detector design, which further enhances the overall detection efficiency.
+( c)
+( d)
+FIG. 6. Angular distributions and detector acceptances for neutrons (a) and photons (b) from the
+neutral 
+ decay mode, and for decay protons (c) and 
+ mesons (d) from the charged 
+ decay
+mode, for a 20 GeV proton beam on a 3.5 GeV electron beam.
+Building on these kinematic and detector advantages, the reconstruction performance of
+ decays at EicC is illustrated in Figure 6, which shows the angular distributions of the 
+decay products
+(a) neutron and (b) photon from the neutral decay channel, and (c) proton
+and (d) 
+ from the charged decay channel
+together with their corresponding acceptance
+in the far forward detector system. Building upon these reconstruction capabilities, the kaon
+structure function can be measured following a strategy analogous to that used for the pion.
+By focusing on the charged decay channel, which dominates the statistics and offers higher
+detection efficiency, the impact of detector-resolution effects is mitigated compared with the
+pion measurement, as both the final-state proton and pion can be reconstructed with high
+precision. Overall, the full far-forward detector system yields an approximate 
+ detection
+efficiency of about 40%, with the charged decay channel contributing roughly 55% and the
+neutral channel about 15%.
+STRUCTURE FUNCTION
+To reliably extract the meson structure functions via the Sullivan process, it is essential
+to isolate events of insterest with high purity. Figure 7 illustrates the key kinematic distributions used to separate Sullivan events from generic DIS backgrounds, with the DIS sample
+generated using the PYTHIA 8 event generator [80]. As shown in Fig. 7(a), after applying the
+kinematic requirements xL > 0.75, MX > 0.5 GeV, and W 2 > 4 GeV2 , the pseudorapidity
+distribution of the final-state neutron exhibits a pronounced peak in the far-forward region,
+showing a clear dominance of events at 
+n > 4, which enables efficient background suppression. The ZDC covers the region 
+n > 5, which naturally helps to suppress background.
+Figure 7(b) shows the xL distributions of DIS and Sullivan events after applying the cuts
+n > 5, pnT < 0.3 GeV, MX > 0.5 GeV, and W 2 > 4 GeV2 . The xL variable is a powerful
+discriminator for the two different processes, with the Sullivan events peak strongly at large
+xL , whereas DIS backgrounds fall off at high xL . A final requirement of xL > 0.75 and
+n > 5, indicated by the vertical dashed lines, yields a Sullivan-event purity exceeding 90%.
+In addition, conventional cuts of 0.01 < |t| < 1 GeV2 and xB < 1 were applied to ensure
+that the simulated data follow physically realistic distributions.
+The extraction of the meson structure functions is performed in bins of (xM , Q2 ). The
+event generator provides, for each generated event, the differential cross section and the
+corresponding event rate. When filling the histograms, each event is weighted by the product
+of its rate and the assumed integrated luminosity, such that the resulting distributions
+represent the expected yield under realistic running conditions.
+For each (xM , Q2 ) bin, the differential yield as a function of the squared momentum
+transfer t of the forward baryon is constructed. The relation between the four-fold differential cross section and the meson structure function is given by Eq. 4, which factorizes the
+measured cross section into the structure function F2M and the meson flux factor fM/p (xL , t).
+In the extraction, the flux fM/p (xL , t) is fixed using a chosen flux model, while F2M is determined by fitting the t distribution with Eq. 4. The statistical uncertainty of F2M is taken
+from the covariance matrix of the fit.
+The systematic uncertainty assessment has been performed with particular emphasis on
+Sullivan
+xL > 0.75 GeV
+MX > 0.5 GeV
+W 2 > 4 GeV 2
+9000
+Events
+4500
+Events
+12000
+6000
+Neutron 
+ > 5.0
+Neutron pT < 0.5 GeV
+MX > 0.5 GeV
+W 2 > 4 GeV 2
+1500
+3000
+3000
+Sullivan
+Neutron 
+00.0
+FIG. 7. Kinematic distributions of the final-state neutron in DIS (blue) and Sullivan (orange)
+events. (a): Pseudorapidity (
+) distribution of the neutron after applying xL > 0.75, MX >
+0.5 GeV, and W 2 > 4 GeV2 . The dashed line at 
+ = 5 indicates the selection cut used to achieve
+high Sullivan purity. (b): Distribution of xL for the neutron after applying 
+ > 5, pT < 0.3 GeV,
+MX > 0.5 GeV, and W 2 > 4 GeV2 . The dashed line at xL = 0.75 indicates the final selection
+threshold used to achieve high Sullivan purity.
+detector-related effects. These studies were first carried out for the pion measurement,
+followed by a parallel evaluation for the kaon measurement.
+The important source of systematic uncertainty arises from detector resolution effects.
+These were implemented by applying Gaussian smearing to the true four-momentum vectors
+of both the scattered electron and the forward neutron. For the scattered electron, the
+momentum, polar angle, and azimuthal angle were independently smeared according to the
+parameterized resolutions obtained from the EicC fast simulation. For the forward neutron
+detected in the ZDC, the energy and impact position on the detector plane were smeared
+using the energy-dependent resolutions given by the position resolution in Eq. 7 and the
+energy resolution in Eq. 6. The resulting smeared four-momentum vectors were propagated
+through the reconstruction chain to incorporate realistic detector effects.
+To estimate the uncertainty associated with these resolutions, the energy and position
+smearing parameters were varied by 
+10%, and the induced variations in the reconstructed
+distributions were taken as the corresponding systematic uncertainty. As an additional
+cross-check, both smeared and unsmeared distributions were fitted using Eq. 4. The detectorresolution uncertainty contributes approximately 10% to the pion measurement.
+Beyond detector resolution, several additional sources of systematic uncertainty were
+evaluated. A 3% uncertainty arises from luminosity normalization, reflecting the precision
+of the integrated luminosity determination. Acceptance corrections introduce another 8%
+uncertainty due to potential mismodeling of the detector acceptance across the relevant
+kinematic range. The ratio method [42], which extracts the pion structure function by
+taking the ratio of tagged to inclusive DIS yields to cancel common systematic effects,
+introduces an additional 2% uncertainty associated with the proton structure function F2p .
+These contributions together form the complete systematic uncertainty budget for the pion
+measurement.
+In the analysis of the kaon structure function, we use only the charged decay channel for
+now for simplicity. The associated systematic uncertainty study is performed following the
+same methodology as in the pion case. Detector-resolution effects were evaluated by applying
+the identical smearing procedure to the kaon sample. However, because the reconstructed
+final state predominantly comes from the decay 
+ , whose charged decay products are
+efficiently measured by the tracking system, the overall momentum resolution is significantly
+improved. Consequently, the detector-resolution uncertainty for the kaon measurement is
+reduced to approximately 5%.
+In addition, the background process e p 
+0 X, 
+ introduces a non-negligible
+systematic uncertainty to the kaon structure
+function measurement. Since both the signal
+process ep 
+X and the background channel produce a 
+ baryon in the final state, the
+contamination from 
+0 production must be taken into account. To estimate this effect, we
+compared the hadronic couplings gK
+N and gK
+N using values reported in various theoretical
+studies [81
+93], which suggests that the relative size of the 
+0 contribution could be at the
+level of approximately 10%. However, the charged decay mode 
+ can be partially
+vetoed when the decay photon from 
+0 has sufficient energy. Taking this into consideration,
+we adopt a conservative estimate of a residual 
+ 5% systematic uncertainty associated with
+the 
+0 background.
+All remaining sources of systematic uncertainty
+including luminosity normalization, acceptance effects, and uncertainties from the ratio method
+are treated using the same procedures as in the pion analysis, ensuring full consistency across both measurements.
+Based on all the sources of uncertainty discussed above, Fig. 8 presents the systematic and
+statistical uncertainties for the pion (left panel) and kaon (right panel) structure
+function
+extractions across the relevant kinematic ranges. For the pion measurement, the accessible
+Uncertainty of F2
+ (%)
+Q 2 : [3, 5] GeV 2
+Q 2 : [5, 10] GeV 2
+Q 2 : [10, 20] GeV 2
+Q 2 : [20, 30] GeV 2
+Q 2 : [30, 50] GeV 2
+Uncertainty of F2K (%)
+Q 2 : [3, 5] GeV 2
+Q 2 : [5, 10] GeV 2
+Q 2 : [10, 30] GeV 2
+FIG. 8. Left panel: Projected pion structure function F2
+ at EicC, showing statistical uncertainties
+(error bars) and systematic uncertainties (color bands, excluding the flux factor) for different x
+and Q2 bins. Right panel: Projected kaon structure function F2K at EicC, showing similar
+analysis results. Both cases assume an integrated luminosity of 50 fb
+1 and an energy setting of
+3.5 
+ 20 GeV2 .
+kinematics span Q2 = 3
+50 GeV2 and x
+ = 0
+1. For Q2 > 5 GeV2 , the statistical uncertainty
+in each analysis bin falls below 5%, reaching the precision necessary for detailed studies of the
+pion structure function. In this channel, the ZDC dominates the systematic uncertainty, with
+its energy and position resolutions discussed in Sec. III, and the reconstruction of the squared
+momentum transfer achieving a resolution of approximately 
+ 0.03 GeV2 . For the kaon
+measurement (right panel), the analysis employs the charged decay channel 
+achieving Q2 coverage up to 30 GeV2 . Thanks to the charged decay tracks, the momentum
+transfer t of the 
+ can be reconstructed with a resolution of about 
+ 0.0075 GeV2 ,
+and the overall reconstruction efficiency of the charged decay exceeds 50%. The statistical
+uncertainty remains below 8% for all bins, enabling precise studies of the kaon structure
+function. Overall, these results demonstrate that EicC offers unique advantages for kaon
+structure
+function measurements through the Sullivan process.
+In Fig. 9, we present the projected measurements of the pion valence up-quark distribution, x
+v (x
+ ), at the EicC for five representative Q2 bins ranging from 3 to 50 GeV2 .
+The total uncertainties, shown as error bars, include both statistical and estimated systematic contributions combined in quadrature. A comparison is made with existing DrellYan data [94], future JLab projections [95], and several theoretical predictions, including
+Dyson-Schwinger approaches [96, 97], perturbative QCD fits [71], and the GRV-P param14
+Dyson-Schwinger/LFWF
+Dyson-Schwinger
+pQCD
+ uv (x
+GRV-P
+JLAB Projection
+Drell-Yan Data
+(Q 2 
+ [16, 49] GeV2 )
+Dyson-Schwinger 
+ 0.7
+EicC Projection(This Work):
+Q 2 
+ [3, 5] GeV 2
+Q 2 
+ [5, 10] GeV 2
+Q 2 
+ [10, 20] GeV 2
+Q 2 
+ [20, 30] GeV 2
+Q 2 
+ [30, 50] GeV 2
+FIG. 9. Projected measurements of the pion valence up-quark distribution x
+v (x
+ ) at the EicC
+in several Q2 bins (colored points with error bars), compared with existing data from Drell-Yan
+experiments (black circles) [94], JLab projections (red squares) [95], and various theoretical predictions including Dyson-Schwinger (green and orange bands/curves) [96, 97], pQCD (teal dashed
+line) [71], and GRV-P (black dashed line) [96]. The red solid curve shows the Dyson-Schwinger
+prediction scaled by a factor of 0.7. The error bars on the EicC projections represent the combined
+statistical and estimated systematic uncertainties.
+eterization [96]. The EicC provides unprecedented sensitivity to the intermediate-to-large
+ region in Sullivan-process measurements, a kinematic domain where no data from Sullivan experiments are currently available, thereby offering crucial new information on the
+pion
+s structure in the nonperturbative valence region. While the pion structure function has
+been constrained by previous measurements, experimental information on the kaon structure
+function remains very limited. Therefore, the kaon structure function measurements at the
+EicC will be particularly valuable.
+With the projected precision demonstrated above, the EicC data can be meaningfully
+combined with existing and future Drell
+Yan measurements. Compared with the existing
+world data, the EicC extends the accessible Q2 coverage by a factor of 2
+3 beyond JLab12 GeV, effectively bridging the gap between fixed-target and collider-era measurements.
+Since the Drell
+Yan process is independent of the meson flux, its extracted structure functions are free of flux-model uncertainties. Therefore, combining the Drell
+Yan measurements
+with the EicC Sullivan data in the overlapping kinematic region can substantially reduce
+the model-dependent systematic uncertainties, particularly those originating from the pion
+flux. In practice, the model uncertainty associated with the pion flux is typically estimated
+to be on the order of 
+25% [41, 42, 46]. A combined analysis of the EicC measurements and pion Drell
+Yan data in the same kinematic regime, such as those from AMBER
+and Fermilab [94, 98], is expected to significantly constrain and reduce this flux-related
+uncertainty.
+SUMMARY AND OUTLOOK
+This study investigates the feasibility and expected precision of measuring the meson
+structure functions F2
+ and F2K at the proposed EicC, based on the Sullivan process. By selecting final-state forward baryons based on their xL distributions in the far forward region,
+high-purity Sullivan events can be identified, with the deep inelastic scattering background
+effectively suppressed. Within each (xM , Q2 ) bin, the meson structure functions are extracted by fitting the differential yields as a function of the baryon momentum transfer t.
+Detector resolution effects are simulated by applying Gaussian smearing to the four-momenta
+of the electron and forward baryon, while systematic uncertainties are evaluated through a
+combination of variations in resolution, acceptance corrections, and other methods. Under
+the nominal EicC running conditions with an integrated luminosity of 50 fb
+1 , the statistical
+precision of F2
+ reaches better than 5% in the key kinematic region (Q2 > 5 GeV2 ), while
+the overall statistical uncertainty of F2K is controlled within 8%. For F2
+ , detector-related
+effects
+such as the forward baryon reconstruction efficiency and t resolution
+constitute
+the dominant sources of systematic uncertainty, contributing roughly 10%. In contrast, for
+F2K , these detector effects are mitigated by the presence of charged decay channels, reducing
+their impact to approximately 5%.
+At the results level, EicC measurements of F2
+ exhibit a pronounced advantage in the
+medium-to-large x
+ region and can provide complementary constraints to existing Drell
+Yan data, thereby further reducing the theoretical uncertainties associated with meson flux
+factors. In contrast, experimental information on the kaon structure function remains extremely limited; what is exciting is that EicC will provide a particularly valuable opportunity
+for systematic, high-precision measurements of F2K across a broad kinematic range. Leverag16
+ing the efficient reconstruction of 
+ decays, superior resolution in momentum transfer
+can be achieved for the kaon measurement, enhancing the overall feasibility of measuring
+F2K .
+Our study suggests that, even with the present detector performance assumptions, EicC
+will serve as an ideal facility for probing the internal structure of pions and kaons. The detector design is still under ongoing optimization. In particular, with more advanced detector
+technology, the energy resolution of ZDC is expected to reach approximately 35%/ E, which
+will further reduce the systematic uncertainties in the extraction of F2
+ . For kaon measurements, although the neutral decay channel of the 
+ has a relatively small branching ratio, it
+is in principle feasible to reconstruct its decay topology using the forward detector system.
+At the current stage, however, the main limitation arises from the insufficient size of the
+ZDC, which leads to a low neutron acceptance, as illustrated in Fig. 6(a). To address this
+issue, one possible improvement is to install an additional hadronic calorimeter downstream
+of the EDT
+ECal system to enhance the acceptance for neutral particles. Such an upgrade
+would require coordinated design with the beamline. In addition, given the different PID
+requirements, the neutral decay channel would help constrain the systematic uncertainties
+in F2K due to PID, thereby enhancing the robustness of the meson-structure studies at EicC.
+In summary, EicC will provide essential and high-precision experimental input for understanding the quark structure of light mesons under strong interactions, offering a valuable
+testing ground for non-perturbative QCD.
+ACKNOWLEDGMENTS
+We would like to express our heartfelt gratitude to Craig D. Roberts, Tanja Horn, Garth
+M. Huber, Jixie Zhang, Richard Trotta and Avnish Singh for their invaluable theoretical
+guidance and technical support throughout this work. We also sincerely thank Jianing Dong
+for ensuring the excellent performance and reliability of the computer facility at Shandong
+University, which made our computations possible.
+This work is supported by the National Natural Science Foundation of China under
+Grant Nos. 12305144 and 12375139, the Shandong Province Natural Science Foundation
+under Grant Nos. 2023HWYQ-010 and ZR2022QA032, and the National Key Research and
+Development Project of China under Contract No. 2023YFA1606800.
+[1] Y. Nambu, Phys. Rev. 117, 648 (1960).
+[2] J. Goldstone, Nuovo Cim. 19, 154 (1961).
+[3] A. Deur, S. J. Brodsky, and G. F. de Teramond, Phys. Lett. B 757, 275 (2016),
+arXiv:1601.06568 [hep-ph].
+[4] A. Deur, S. J. Brodsky, and G. F. de Teramond, Nucl. Phys. 90, 1 (2016), arXiv:1604.08082
+[hep-ph].
+[5] G. F. de Teramond, S. J. Brodsky, A. Deur, H. G. Dosch, and R. S. Sufian, EPJ Web Conf.
+137, 03023 (2017), arXiv:1611.03763 [hep-ph].
+[6] C. D. Roberts, D. G. Richards, T. Horn, and L. Chang, Prog. Part. Nucl. Phys. 120, 103883
+(2021), arXiv:2102.01765 [hep-ph].
+[7] X. Gao, L. Jin, C. Kallidonis, N. Karthik, S. Mukherjee, P. Petreczky, C. Shugert, S. Syritsyn,
+and Y. Zhao, Phys. Rev. D 102, 094513 (2020), arXiv:2007.06590 [hep-lat].
+[8] X. Gao, N. Karthik, S. Mukherjee, P. Petreczky, S. Syritsyn, and Y. Zhao, Phys. Rev. D 104,
+114515 (2021), arXiv:2102.06047 [hep-lat].
+[9] H.-T. Ding, X. Gao, A. D. Hanlon, S. Mukherjee, P. Petreczky, Q. Shi, S. Syritsyn, R. Zhang,
+and Y. Zhao, Phys. Rev. Lett. 133, 181902 (2024), arXiv:2404.04412 [hep-lat].
+[10] J.-W. Chen, H.-W. Lin, and J.-H. Zhang, Nucl. Phys. B 952, 114940 (2020), arXiv:1904.12376
+[hep-lat].
+[11] H.-W. Lin, J.-W. Chen, Z. Fan, J.-H. Zhang, and R. Zhang, Phys. Rev. D 103, 014516 (2021),
+arXiv:2003.14128 [hep-lat].
+[12] C. D. Roberts and A. G. Williams, Prog. Part. Nucl. Phys. 33, 477 (1994), arXiv:hepph/9403224.
+[13] P. Maris, C. D. Roberts, and P. C. Tandy, Phys. Lett. B 420, 267 (1998), arXiv:nuclth/9707003.
+[14] L. Chang, I. C. Cloet, J. J. Cobos-Martinez, C. D. Roberts, S. M. Schmidt, and P. C. Tandy,
+Phys. Rev. Lett. 110, 132001 (2013), arXiv:1301.0324 [nucl-th].
+[15] C. Shi, C. Mezrag, and H.-s. Zong, Phys. Rev. D 98, 054029 (2018), arXiv:1806.10232 [nucl-th].
+[16] K. D. Bednar, I. C. Cloe
+t, and P. C. Tandy, Phys. Rev. Lett. 124, 042002 (2020),
+arXiv:1811.12310 [nucl-th].
+[17] R. Machleidt and D. R. Entem, Phys. Rept. 503, 1 (2011), arXiv:1105.2919 [nucl-th].
+[18] S. Weinberg, Nucl. Phys. B 363, 3 (1991).
+[19] P. T. P. Hutauruk, W. Bentz, I. C. Cloe
+t, and A. W. Thomas, Phys. Rev. C 97, 055210 (2018),
+arXiv:1802.05511 [nucl-th].
+[20] K. Park et al. (CLAS), Eur. Phys. J. A 49, 16 (2013), arXiv:1206.2326 [nucl-ex].
+[21] A. Airapetian et al. (HERMES), Phys. Lett. B 659, 486 (2008), arXiv:0707.0222 [hep-ex].
+[22] E. B. Dally et al., Phys. Rev. D 24, 1718 (1981).
+[23] E. B. Dally et al., Phys. Rev. Lett. 48, 375 (1982).
+[24] S. R. Amendolia et al., Phys. Lett. B 146, 116 (1984).
+[25] S. R. Amendolia et al. (NA7), Nucl. Phys. B 277, 168 (1986).
+[26] L. Favart, M. Guidal, T. Horn, and P. Kroll, Eur. Phys. J. A 52, 158 (2016), arXiv:1511.04535
+[hep-ph].
+[27] C. N. Brown, C. R. Canizares, W. E. Cooper, A. M. Eisner, G. J. Feldmann, C. A. Lichtenstein,
+L. Litt, W. Loceretz, V. B. Montana, and F. M. Pipkin, Phys. Rev. D 8, 92 (1973).
+[28] C. L. Arnold, B. P. Roe, and D. Sinclair, Phys. Rev. D 9, 1221 (1974).
+[29] C. J. Bebek et al., Phys. Rev. D 17, 1693 (1978).
+[30] H. Ackermann, T. Azemoon, W. Gabriel, H. D. Mertiens, H. D. Reich, G. Specht, F. Janata,
+and D. Schmidt, Nucl. Phys. B 137, 294 (1978).
+[31] P. Brauel, T. Canzler, D. Cords, R. Felst, G. Grindhammer, M. Helm, W. D. Kollmann,
+H. Krehbiel, and M. Schadlich, Z. Phys. C 3, 101 (1979).
+[32] V. Tadevosyan et al. (Jefferson Lab F(pi)), Phys. Rev. C 75, 055205 (2007), arXiv:nuclex/0607007.
+[33] T. Horn et al. (Jefferson Lab F(pi)-2), Phys. Rev. Lett. 97, 192001 (2006), arXiv:nuclex/0607005.
+[34] M. Carmignotto et al., Phys. Rev. C 97, 025204 (2018), arXiv:1801.01536 [nucl-ex].
+[35] A. Accardi et al., Eur. Phys. J. A 60, 173 (2024), arXiv:2306.09360 [nucl-ex].
+[36] T. Horn et al., Phys. Rev. C 78, 058201 (2008), arXiv:0707.1794 [nucl-ex].
+[37] G. M. Huber et al. (Jefferson Lab), Phys. Rev. C 78, 045203 (2008), arXiv:0809.3052 [nucl-ex].
+[38] Measurement of Tagged Deep Inelastic Scattering (TDIS), https://www.jlab.org/exp_
+prog/proposals/14/PR12-14-010.pdf (), accessed: 2021-09-16.
+[39] Measurement of Kaon Structure Function through Tagged Deep Inelastic Scattering (TDIS),
+https://www.jlab.org/exp_prog/proposals/17/C12-15-006A.pdf (), accessed: 2021-0916.
+[40] D. R. DeBoer et al., Publ. Astron. Soc. Pac. 129, 045001 (2017), arXiv:1606.07473 [astroph.IM].
+[41] F. D. Aaron et al. (H1), Eur. Phys. J. C 68, 381 (2010), arXiv:1001.0532 [hep-ex].
+[42] S. Chekanov et al. (ZEUS), Nucl. Phys. B 637, 3 (2002), arXiv:hep-ex/0205076.
+[43] C. Quintans (AMBER), Few Body Syst. 63, 72 (2022).
+[44] B. Adams et al., Letter of Intent: A New QCD facility at the M2 beam line of the CERN
+SPS (COMPASS++/AMBER) (2018), cERN-SPSC-2019-003, SPSC-I-250, arXiv:1808.00848
+[hep-ex].
+[45] A. C. Aguilar et al., Eur. Phys. J. A 55, 190 (2019), arXiv:1907.08218 [nucl-ex].
+[46] J. Arrington et al., J. Phys. G 48, 075106 (2021), arXiv:2102.11788 [nucl-ex].
+[47] R. Abdul Khalek et al., Nucl. Phys. A 1026, 122447 (2022), arXiv:2103.05419 [physics.ins-det].
+[48] M. Ding, C. D. Roberts, and S. M. Schmidt, Particles 6, 57 (2023), arXiv:2211.07763 [hep-ph].
+[49] E. Ruiz Arriola and P. Sanchez-Puertas, Phys. Rev. D 110, 054003 (2024), arXiv:2403.07121
+[hep-ph].
+[50] J. D. Sullivan, Phys. Rev. D 5, 1732 (1972).
+[51] C. Adloff et al. (H1), Eur. Phys. J. C 6, 587 (1999), arXiv:hep-ex/9811013.
+[52] D. P. Anderle et al., Front. Phys. (Beijing) 16, 64701 (2021), arXiv:2102.09222 [nucl-ex].
+[53] H. Holtmann, G. Levman, N. N. Nikolaev, A. Szczurek, and J. Speth, Phys. Lett. B 338, 393
+(1995), arXiv:hep-ph/9602229.
+[54] J. R. McKenney, N. Sato, W. Melnitchouk, and C.-R. Ji, Phys. Rev. D 93, 054011 (2016),
+arXiv:1512.04459 [hep-ph].
+[55] V. P. Goncalves, F. S. Navarra, and D. Spiering, Phys. Rev. D 93, 054025 (2016),
+arXiv:1512.06594 [hep-ph].
+[56] G. Xie, C. Han, R. Wang, and X. Chen, Chin. Phys. C 46, 064107 (2022), arXiv:2109.08483
+[hep-ph].
+[57] R. Wang, G. Xie, W. Xiong, Y. Liang, and X. Chen, Few Body Syst. 64, 28 (2023).
+[58] G. Xie, M. Li, C. Han, R. Wang, and X. Chen, Chin. Phys. C 45, 053002 (2021),
+arXiv:2009.04956 [hep-ph].
+[59] M. Bishari, Phys. Lett. B 38, 510 (1972).
+[60] H. Holtmann, G. Levman, N. N. Nikolaev, A. Szczurek, and J. Speth, Phys. Lett. B 338, 363
+(1994).
+[61] B. Kopeliovich, B. Povh, and I. Potashnikova, Z. Phys. C 73, 125 (1996), arXiv:hepph/9601291.
+[62] R. G. E. Timmermans, T. A. Rijken, and J. J. de Swart, Phys. Rev. Lett. 67, 1074 (1991).
+[63] C. Xu, C. Lei, C. Ningbo, et al., NUCLEAR TECHNIQUES 43, 1 (2020).
+[64] X. Chen, PoS DIS2018, 170 (2018), arXiv:1809.00448 [nucl-ex].
+[65] S. Zhu, D. Zheng, L. Xia, and Y. Zhang, Phys. Rev. D 111, 076024 (2025), arXiv:2409.00653
+[hep-ph].
+[66] D. P. Anderle, A. Guo, F. Hekhorn, Y. Liang, Y. Ma, L. Xia, H. Xing, and Y. Zhao, Phys.
+Rev. D 109, 034021 (2024), arXiv:2307.16135 [nucl-ex].
+[67] S. Agostinelli et al. (GEANT4), Nucl. Instrum. Meth. A 506, 250 (2003).
+[68] rong-wang impcas, https://github.com/rong-wang-impcas/tagged-neutron-DIS (), accessed: 2023-08-24.
+[69] rong-wang impcas, https://github.com/rong-wang-impcas/tagged-Lambda-DIS (), accessed: 2023-08-24.
+[70] R. Brun and F. Rademakers, Nucl. Instrum. Meth. A 389, 81 (1997).
+[71] P. C. Barry, N. Sato, W. Melnitchouk, and C.-R. Ji, Phys. Rev. Lett. 121, 152001 (2018),
+arXiv:1804.01965 [hep-ph].
+[72] C. Han, H. Xing, X. Wang, Q. Fu, R. Wang, and X. Chen, Phys. Lett. B 800, 135066 (2020),
+arXiv:1809.01549 [hep-ph].
+[73] lukeronger/piIMParton, https://github.com/lukeronger/piIMParton, accessed: 2020-0901.
+[74] P. C. Barry, C.-R. Ji, W. Melnitchouk, N. Sato, and F. Steffens (JAM), First simultaneous
+global QCD analysis of kaon and pion parton distributions with lattice QCD constraints
+(2025), arXiv:2510.11979 [hep-ph].
+[75] C. Bourrely, F. Buccella, W.-C. Chang, and J.-C. Peng, Phys. Lett. B 848, 138395 (2024),
+arXiv:2305.18117 [hep-ph].
+[76] W.-C. Chang, J.-C. Peng, S. Platchkov, and T. Sawada, Phys. Lett. B 855, 138820 (2024),
+arXiv:2402.02860 [hep-ph].
+[77] C. Han, G. Xie, R. Wang, and X. Chen, Eur. Phys. J. C 81, 302 (2021), arXiv:2010.14284
+[hep-ph].
+[78] J. Badier et al. (Saclay-CERN-College de France-Ecole Poly-Orsay), Phys. Lett. B 93, 354
+(1980).
+[79] S. Navas et al. (Particle Data Group), Phys. Rev. D 110, 030001 (2024).
+[80] C. Bierlich et al., SciPost Phys. Codeb. 2022, 8 (2022), arXiv:2203.11601 [hep-ph].
+[81] T. M. Aliev and M. Savci, Phys. Rev. C 61, 045201 (2000), arXiv:hep-ph/9902466.
+[82] R. A. Adelseck and B. Saghai, Phys. Rev. C 42, 108 (1990).
+[83] R. A. Williams, C. R. Ji, and S. R. Cotanch, Phys. Rev. C 43, 452 (1991).
+[84] R. A. Williams, C. R. Ji, and S. R. Cotanch, Phys. Rev. C 46, 1617 (1992).
+[85] T. Mart, C. Bennhold, and C. E. Hyde, Phys. Rev. C 51, R1074 (1995), arXiv:nucl-th/9502016.
+[86] J. C. David, C. Fayard, G. H. Lamot, and B. Saghai, Phys. Rev. C 53, 2613 (1996).
+[87] I. J. General and S. R. Cotanch, Phys. Rev. C 69, 035202 (2004), arXiv:nucl-th/0311039.
+[88] M. Guidal, J. M. Laget, and M. Vanderhaeghen, Nucl. Phys. A 627, 645 (1997).
+[89] F. X. Lee, T. Mart, C. Bennhold, and L. E. Wright, Nucl. Phys. A 695, 237 (2001), arXiv:nuclth/9907119.
+[90] A. D. Martin, Nucl. Phys. B 179, 33 (1981).
+[91] C. Gobbi, D. O. Riska, and N. N. Scoccola, Nucl. Phys. A 544, 671 (1992).
+[92] S. Choe, M. K. Cheoun, and S. H. Lee, Phys. Rev. C 53, 1363 (1996), arXiv:nucl-th/9508037.
+[93] W.-T. Chiang, F. Tabakin, T. S. H. Lee, and B. Saghai, Phys. Lett. B 517, 101 (2001),
+arXiv:nucl-th/0104052.
+[94] J. Badier et al. (NA3), Z. Phys. C 18, 281 (1983).
+[95] D. Adikaram et al., Measurement of Tagged Deep Inelastic Scattering (TDIS), Experiment
+Proposal PR12-15-006 (Thomas Jefferson National Accelerator Facility, 2015).
+[96] M. B. Hecht, C. D. Roberts, and S. M. Schmidt, Phys. Rev. C 63, 025213 (2001), arXiv:nuclth/0008049.
+[97] Z.-F. Cui, M. Ding, F. Gao, K. Raya, D. Binosi, L. Chang, C. D. Roberts, J. Rodr
+guezQuintero, and S. M. Schmidt, Eur. Phys. J. C 80, 1064 (2020).
+[98] B. Betev et al. (NA10), Z. Phys. C 28, 9 (1985).
