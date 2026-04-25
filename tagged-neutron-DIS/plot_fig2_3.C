@@ -30,10 +30,8 @@ void plot_fig2_3() {
     tree->SetBranchAddress("elec_out", &elec_out);
     tree->SetBranchAddress("neut_out", &neut_out);
 
-    // Volume V = 1.0 * 49.0 * 0.629 * 0.99 (ΔxL = 0.999 - 0.37 = 0.629)
-    // Volume V = 0.9999 * 49.0 * 0.629 * 0.99
-    // Apply empirical correction factor (2.7) for dynamic t bounds, consistent with Figure 7.
-    double V = 0.9999 * 49.0 * 0.629 * 0.99 * 2.7;
+    // Paper-faithful generation: ΔxL = 0.999 - 0.75 = 0.249
+    double V = 0.9999 * 49.0 * 0.249 * 0.99;
     double N_gen = tree->GetEntries();
     double L = 1.0; // Normalization for Rate (Hz)
     double norm = L * V / N_gen;

@@ -85,6 +85,13 @@ int main() {
     }
 
     pythia.stat();
+
+    // Export metadata for normalization
+    TParameter<double> pSigma("sigmaGen_nb", pythia.info.sigmaGen() * 1e6); // mb to nb
+    TParameter<double> pWsum("weightSum", pythia.info.weightSum());
+    pSigma.Write();
+    pWsum.Write();
+
     tree->Write();
     f->Close();
 

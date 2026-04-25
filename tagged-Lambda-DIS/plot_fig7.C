@@ -1,5 +1,6 @@
 #include "TFile.h"
 #include "TTree.h"
+#include "TParameter.h"
 #include "TH1D.h"
 #include "TCanvas.h"
 #include "TLorentzVector.h"
@@ -7,12 +8,13 @@
 #include "TMath.h"
 #include "TLegend.h"
 #include "TLine.h"
+#include "TLatex.h"
 
 void plot_fig7() {
     gStyle->SetOptStat(0);
 
     // Load Signal (Pion Study - Neutron tagged)
-    TFile *fSig = TFile::Open("../tagged-neutron-DIS/TaggedNeutron-DIS-EicC.root");
+    TFile *fSig = TFile::Open("../tagged-neutron-DIS/TaggedNeutron-DIS-EicC-Fig7.root");
     if(!fSig) { cout<<"Signal file not found!"<<endl; return; }
     TTree *tSig = (TTree*)fSig->Get("tree");
 
@@ -38,6 +40,11 @@ void plot_fig7() {
     tBkg->SetBranchAddress("MX2", &MX2_bkg);
     tBkg->SetBranchAddress("id", &id_bkg);
 
+    double evtWeight_bkg = 1.0;
+    if (tBkg->GetBranch("evtWeight")) {
+        tBkg->SetBranchAddress("evtWeight", &evtWeight_bkg);
+    }
+
     TH1D *hEtaSig = new TH1D("hEtaSig", ";Neutron #eta;Events", 20, 2, 10);
     TH1D *hXLSig = new TH1D("hXLSig", ";x_{L};Events", 35, 0.0, 1.0);
     TH1D *hXLSig_pT03 = new TH1D("hXLSig_pT03", ";x_{L};Events", 35, 0.0, 1.0);
@@ -48,18 +55,27 @@ void plot_fig7() {
     TH1D *hXLBkg_pT05 = new TH1D("hXLBkg_pT05", ";x_{L};Events", 35, 0.0, 1.0);
 
     // Pure Physical Normalization: 1 pb^-1 (1000 nb^-1)
-    // The generator restricts 't' bounds dynamically (t0, t1) per event.
-    // Our static volume calculation V_sig underestimates the true phase space 
-    // because it uses a fixed 0.99 width instead of the true average (t0 - t1).
-    // Empirical correction factor to match the true integrated volume: ~2.7.
-    double V_sig = 1.0 * 49.0 * 0.629 * 0.99 * 2.7;
+    // For Fig 7, xL generation is from 0.36 to 0.999, so ΔxL = 0.639
+    double V_sig = 1.0 * 49.0 * 0.639 * 0.99;
     double N_gen_sig = tSig->GetEntries();
     double L = 1000.0; // 1 pb^-1
     double norm_sig = L * V_sig / N_gen_sig;
 
 
-    double sigma_dis = 1000.0; 
-    double norm_bkg = L * sigma_dis / 300000.0;
+    auto pSigma = dynamic_cast<TParameter<double>*>(fBkg->Get("sigmaGen_nb"));
+    auto pWsum  = dynamic_cast<TParameter<double>*>(fBkg->Get("weightSum"));
+
+    if (!pSigma || !pWsum) {
+        cout << "ERROR: Missing sigmaGen_nb / weightSum in DIS_Background_EicC.root.\n"
+             << "Re-generate the background file using the updated generate_dis_background.cpp\n";
+        return;
+    }
+
+    double sigma_dis_nb = pSigma->GetVal();
+    double wsum         = pWsum->GetVal();
+
+    // Normalize background to integrated luminosity L (nb^-1):
+    double norm_bkg_base = L * sigma_dis_nb / wsum;
 
     // Proton beam vector for signal (50 mrad crossing angle)
     TLorentzVector pBeam_v4;
@@ -107,6 +123,8 @@ void plot_fig7() {
         // In Pythia background simulation, proton beam was exactly along -z (no crossing angle).
         double eta_rel_bkg = -eta_bkg;
 
+        double w_bkg = norm_bkg_base * evtWeight_bkg;
+
         // Reconstruct neutron 4-vector to calculate |t|
         double pz_bkg = pT_bkg * sinh(eta_bkg);
         double E_bkg = sqrt(pT_bkg*pT_bkg + pz_bkg*pz_bkg + 0.939565*0.939565);
@@ -118,18 +136,18 @@ void plot_fig7() {
         double abs_t_bkg = fabs(t_vec_bkg.M2());
 
         // (a) Cuts for eta plot: apply consistent |t| < 1.0 cut as done for signal
-        if (xL_bkg > 0.75 && MX2_bkg > 0.5*0.5 && W2_bkg > 4.0 && abs_t_bkg < 1.0) {
-            hEtaBkg->Fill(eta_rel_bkg, norm_bkg);
+        if (xL_bkg > 0.75 && MX2_bkg > 0.5*0.5 && W2_bkg > 4.0 && abs_t_bkg > 0.01 && abs_t_bkg < 1.0) {
+            hEtaBkg->Fill(eta_rel_bkg, w_bkg);
         }
 
         // (b) Cuts for xL plot: two cases to compare pT threshold
         if (eta_rel_bkg > 5.0 && MX2_bkg > 0.5*0.5 && W2_bkg > 4.0) {
             if (pT_bkg < 0.3) {
-                hXLBkg->Fill(xL_bkg, norm_bkg);
-                hXLBkg_pT03->Fill(xL_bkg, norm_bkg);
+                hXLBkg->Fill(xL_bkg, w_bkg);
+                hXLBkg_pT03->Fill(xL_bkg, w_bkg);
             }
             if (pT_bkg < 0.5) {
-                hXLBkg_pT05->Fill(xL_bkg, norm_bkg);
+                hXLBkg_pT05->Fill(xL_bkg, w_bkg);
             }
         }
     }
