@@ -1,19 +1,44 @@
-# ROOT data files (too large for GitHub)
+# ROOT generated files
 *.root
-
-# ROOT compiled libraries and dictionaries
-*.so
 *.d
+*.so
 *.pcm
-
-# Test/scratch scripts
-test_*.C
-
-# OS junk
-.DS_Store
-*.swp
-*~
 
 # Compiled binaries
 generate_dis_background
-get_sigma
+test_q2
+
+# Logs and temp files
+*.log
+*.txt
+!README.md
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Editor backups
+*~
+*.swp
+
+# OS files
+.DS_Store
+
+# Scratch scripts (keep only production scripts)
+paper.txt
+paper_text.txt
+temp.txt
+out_shape.txt
+bkg_gen.log
+shapes.png
+
+# One-off debug scripts in root dir
+diag_bkg.C
+test_shape.C
+test_max.C
+compare_plots.py
+get_peaks.py
+get_real_peaks.py
+read_yaxis.py
+test_log.py
+test_q2.cpp
